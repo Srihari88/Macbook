@@ -1,0 +1,134 @@
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class Nani {
+
+	public static AppiumDriver driver;
+
+	public static void main(String[] args) throws IOException, Exception {
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/pvstage.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		// driver.quit();
+
+		Thread.sleep(8000);
+		//
+		// driver.findElement(By.id("et_email")).sendKeys("sree.hari");
+		// driver.findElement(By.id("et_password")).sendKeys("9010satya");
+		// driver.findElement(By.id("btn_login")).click();
+		//
+		// // Moving the slides
+		//
+		// WebElement contact =
+		// driver.findElement(By.id("com.pitchvision.stage.debug:id/indicator"));
+		// int wide = contact.getSize().width;
+		// int hgt = contact.getSize().height;
+		//
+		// int startx = (int) (wide * (0.9));
+		// int endx = (int) (wide * (0.2));
+		// int starty = hgt / 2;
+		// int endy = hgt / 2;
+		//
+		// // To move from Fav to all contacts, we need to swipe from right to
+		// left
+		// driver.swipe(startx, starty, endx, endy, 1000);
+		// driver.swipe(startx, starty, endx, endy, 1000);
+		// driver.swipe(startx, starty, endx, endy, 1000);
+		// driver.swipe(startx, starty, endx, endy, 1000);
+		// driver.swipe(startx, starty, endx, endy, 1000);
+		//
+		// driver.findElement(By.id("btn_continue")).click();
+		//
+		// System.out.println("All user guide slides are moved.");
+		//
+		// // Match score Entering to the player ..
+
+		driver.findElement(By.id("tab_tv_plus")).click();
+		Thread.sleep(2000);
+
+		// driver.findElement(By.linkText("Match Scores")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Match Scores']")).click();
+
+		Thread.sleep(5000);
+
+		driver.findElement(By.id("action_add_stats")).click();
+
+		// Enter the all fields..
+		driver.findElement(By.id("team_spinner_tv")).sendKeys("SriHari");
+		driver.findElement(By.id("id_opposition")).sendKeys("Macbook");
+		driver.findElement(By.id("id_league_text")).sendKeys("Dell");
+		driver.findElement(By.id("id_match_type_text")).sendKeys("Live");
+		driver.findElement(By.id("id_venue_text")).sendKeys("Gurgaon");
+
+		// driver.findElement(By.xpath("//android.widget.LinearLayout[@index='1']"));
+		// driver.findElement(By.xpath("//android.widget.TextView[@index='0']")).click();
+		// driver.findElementByXPath("//android.widget.TextView[@text='T20']").click();
+		// System.out.println("Selected the T20 field");
+
+		// Format selection
+
+		driver.findElement(By
+				.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.Spinner[1]"))
+				.click();
+		driver.findElement(
+				By.xpath("//android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.TextView[2]"))
+				.click();
+		Thread.sleep(4000);
+		System.out.println("Selected the format");
+
+		// match grade
+
+		driver.findElement(By
+				.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[3]/android.widget.Spinner[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]"))
+				.click();
+		driver.findElement(
+				By.xpath("//android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.TextView[2]"))
+				.click();
+
+		Thread.sleep(4000);
+		System.out.println("Selected the grade");
+
+		// Select surface type
+
+		driver.findElement(By
+				.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[1]/android.widget.Spinner[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]"))
+				.click();
+		driver.findElement(
+				By.xpath("//android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.TextView[2]"))
+				.click();
+
+		Thread.sleep(4000);
+		System.out.println("Selected the surface type");
+
+		// Result
+		driver.findElement(By
+				.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[2]/android.widget.Spinner[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]"))
+				.click();
+		driver.findElement(
+				By.xpath("//android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.TextView[2]"))
+				.click();
+		Thread.sleep(4000);
+
+		// submit the data
+
+		driver.findElement(By
+				.xpath("//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[1]/android.support.v7.widget.LinearLayoutCompat[1]/android.widget.TextView[1]"))
+				.click();
+		System.out.println("Submited the data");
+	}
+
+}

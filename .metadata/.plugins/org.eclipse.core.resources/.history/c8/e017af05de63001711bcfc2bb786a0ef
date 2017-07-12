@@ -1,0 +1,9 @@
+package com.Android.matchstats;
+
+import org.testng.annotations.Test;
+
+public class MatchScoreVerification {
+  @Test
+  public void OpenApp() {
+  }
+}

@@ -1,0 +1,7 @@
+Feature: PitchVision Registration
+
+  Scenario: Filling the data fourm
+    Given Start the Chrome browser
+    When Click on the login button
+    And click on the register button
+    Then Fill the all required fields

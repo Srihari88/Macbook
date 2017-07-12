@@ -1,0 +1,58 @@
+package com.Android.matchstats;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class MatchScoreVerification {
+	public static AppiumDriver driver;
+
+	@Test
+	public void OpenApp() throws MalformedURLException {
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/pvstage.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	}
+
+	@Test
+	public void LoginApp() {
+		driver.findElement(By.id("et_email")).sendKeys("sree.hari");
+		driver.findElement(By.id("et_password")).sendKeys("9010satya");
+		driver.findElement(By.id("btn_login")).click();
+		WebElement contact = driver.findElement(By.id("com.pitchvision.stage.debug:id/indicator"));
+		int wide = contact.getSize().width;
+		int hgt = contact.getSize().height;
+
+		int startx = (int) (wide * (0.9));
+		int endx = (int) (wide * (0.2));
+		int starty = hgt / 2;
+		int endy = hgt / 2;
+
+		// To move from Fav to all contacts, we need to swipe from right to left
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+
+		driver.findElement(By.id("btn_continue")).click();
+
+		System.out.println("All user guide slides are moved.");
+
+
+	}
+}
