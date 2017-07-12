@@ -2785,3 +2785,139 @@ java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.
   Class:     org.testng.remote.RemoteTestNG
   Args:      -serport 50357 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/MatchStatus_Android_OS/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-382031206/testng-customsuite.xml
 java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/MatchStatus_Android_OS/bin:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar org.testng.remote.RemoteTestNG -serport 50357 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/MatchStatus_Android_OS/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-382031206/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 18:56:02.170
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50649 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1983123740/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 50649 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1983123740/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 19:03:06.107
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50815 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1302798734/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 50815 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1302798734/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 19:14:38.930
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51008 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2091120226/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51008 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2091120226/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 19:23:26.514
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51175 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2127908336/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51175 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2127908336/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 19:25:56.864
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51297 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1144948054/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51297 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1144948054/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 19:26:41.931
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51302 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1005946431/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51302 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1005946431/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 19:32:29.809
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51479 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2145255974/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51479 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2145255974/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 19:34:53.431
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51607 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-2002534739/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51607 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-2002534739/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 21:26:45.457
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51735 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--407969745/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51735 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--407969745/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 21:28:54.093
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51857 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2059880663/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51857 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--2059880663/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 21:29:23.892
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51866 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1771288339/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 51866 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1771288339/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 21:33:03.804
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52033 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--283542608/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 52033 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--283542608/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 21:37:31.369
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52205 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-880705919/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 52205 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-880705919/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 21:44:20.283
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52362 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--370150505/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 52362 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--370150505/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 22:00:27.300
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52556 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1222939079/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 52556 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1222939079/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 22:03:36.953
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52690 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1309153085/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 52690 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1309153085/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 22:04:03.196
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52698 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1478088501/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 52698 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1478088501/testng-customsuite.xml

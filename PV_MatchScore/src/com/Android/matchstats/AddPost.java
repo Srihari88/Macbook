@@ -12,27 +12,37 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class AddPost {
 	public static AppiumDriver driver;
-  @Test(priority=0)
-  public void OpenApp() throws MalformedURLException, Exception {
 
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.setCapability("appium-version", "1.0");
-			capabilities.setCapability("platformName", "Android");
-			capabilities.setCapability("platformVersion", "6.0");
-			capabilities.setCapability("deviceName", "S6");
-			capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/stagedebug.apk");
-			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-			Thread.sleep(15000);	
-  }
-  
-  @Test(priority=1)
-  public void AddPost(){
-	  driver.findElement(By.id("action_import")).click();
-	  driver.findElement(By.id("subject_et")).sendKeys("MACBOOK APP TESTING");
-	  driver.findElement(By.xpath("//android.widget.RelativeLayout[@index='2'] OR [id='only_me_cb']")).sendKeys("comment_et");
-	  driver.findElement(By.id("id_menu_done")).click();
-	  System.out.println("Message posted successfully");
-	  
-	  
-  }
+	@Test(priority = 0)
+	public void OpenApp() throws MalformedURLException, Exception {
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/stagedebug.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		Thread.sleep(15000);
+	}
+
+	@Test(priority = 1)
+	public void AddPost() throws Exception {
+		driver.findElement(By.id("action_import")).click();
+		driver.findElement(By.id("subject_et")).sendKeys("MACBOOK APP TESTING");
+		driver.findElement(By.id("comment_et")).sendKeys("Hey All, I would like to share a post with frineds..!!");
+		driver.findElement(By.id("only_me_cb")).click();
+		driver.findElement(By.id("id_menu_done")).click();
+		System.out.println("Message posted successfully");
+		Thread.sleep(4000);
+	}
+	
+	@Test(priority=2)
+	public void Verifypost(){
+		driver.scrollTo("Hey All, I would like to share a post with frineds..!!");
+		driver.findElement(By.xpath("//android.widget.RelativeLayout[@index='2']")).click();
+		
+		System.out.println("Added post successfullly");
+		
+		
+	}
 }
