@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62603" started-at="2017-07-12T16:34:03Z" finished-at="2017-07-12T16:35:06Z">
+  <suite name="Default suite" duration-ms="70000" started-at="2017-07-12T17:11:46Z" finished-at="2017-07-12T17:12:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="62603" started-at="2017-07-12T16:34:03Z" finished-at="2017-07-12T16:35:06Z">
+    <test name="Default test" duration-ms="70000" started-at="2017-07-12T17:11:46Z" finished-at="2017-07-12T17:12:56Z">
       <class name="com.Android.matchstats.AddPost">
-        <test-method status="PASS" signature="OpenApp()[pri:0, instance:com.Android.matchstats.AddPost@cc285f4]" name="OpenApp" duration-ms="26034" started-at="2017-07-12T22:04:03Z" finished-at="2017-07-12T22:04:29Z">
+        <test-method status="PASS" signature="OpenApp()[pri:0, instance:com.Android.matchstats.AddPost@cc285f4]" name="OpenApp" duration-ms="26780" started-at="2017-07-12T22:41:46Z" finished-at="2017-07-12T22:42:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method status="PASS" signature="AddPost()[pri:1, instance:com.Android.matchstats.AddPost@cc285f4]" name="AddPost" duration-ms="20589" started-at="2017-07-12T22:04:29Z" finished-at="2017-07-12T22:04:50Z">
+        <test-method status="PASS" signature="AddPost()[pri:1, instance:com.Android.matchstats.AddPost@cc285f4]" name="AddPost" duration-ms="19524" started-at="2017-07-12T22:42:13Z" finished-at="2017-07-12T22:42:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddPost -->
-        <test-method status="PASS" signature="Verifypost()[pri:2, instance:com.Android.matchstats.AddPost@cc285f4]" name="Verifypost" duration-ms="15957" started-at="2017-07-12T22:04:50Z" finished-at="2017-07-12T22:05:06Z">
+        <test-method status="PASS" signature="Verifypost()[pri:2, instance:com.Android.matchstats.AddPost@cc285f4]" name="Verifypost" duration-ms="11171" started-at="2017-07-12T22:42:32Z" finished-at="2017-07-12T22:42:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verifypost -->
+        <test-method status="PASS" signature="likepost()[pri:3, instance:com.Android.matchstats.AddPost@cc285f4]" name="likepost" duration-ms="2001" started-at="2017-07-12T22:42:44Z" finished-at="2017-07-12T22:42:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- likepost -->
+        <test-method status="PASS" signature="comment()[pri:4, instance:com.Android.matchstats.AddPost@cc285f4]" name="comment" duration-ms="7980" started-at="2017-07-12T22:42:46Z" finished-at="2017-07-12T22:42:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- comment -->
+        <test-method status="PASS" signature="sharepost()[pri:5, instance:com.Android.matchstats.AddPost@cc285f4]" name="sharepost" duration-ms="2515" started-at="2017-07-12T22:42:54Z" finished-at="2017-07-12T22:42:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sharepost -->
       </class> <!-- com.Android.matchstats.AddPost -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

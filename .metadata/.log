@@ -2921,3 +2921,11 @@ java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.
   Class:     org.testng.remote.RemoteTestNG
   Args:      -serport 52698 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1478088501/testng-customsuite.xml
 java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 52698 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse-1478088501/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-07-12 22:41:46.014
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin /Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar /Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53067 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1076427489/testng-customsuite.xml
+java -ea -classpath /Users/reenupanwar/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/bin:/Users/reenupanwar/Desktop/Selenium Software/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar:/Users/reenupanwar/Desktop/Appium Software/java-client-2.2.0.jar org.testng.remote.RemoteTestNG -serport 53067 -protocol json -d /Users/reenupanwar/Documents/SeleniumPrograms/PV_MatchScore/test-output /var/folders/1f/64bh46510zb0_lwr2b4b0nhr0000gn/T/testng-eclipse--1076427489/testng-customsuite.xml
