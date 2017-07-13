@@ -5,8 +5,9 @@
     <classes>
       <class name="com.Android.matchstats.AddPost">
         <methods>
-          <include name="OpenApp"/>
-          <include name="AddPost"/>
+          <include name="comment"/>
+          <include name="likepost"/>
+          <include name="sharepost"/>
           <include name="Verifypost"/>
         </methods>
       </class> <!-- com.Android.matchstats.AddPost -->

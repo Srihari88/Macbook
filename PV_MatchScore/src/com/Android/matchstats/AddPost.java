@@ -23,12 +23,14 @@ public class AddPost {
 		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/stagedebug.apk");
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		Thread.sleep(15000);
+
+		driver.findElement(By.id("action_import")).click();
+		driver.findElement(By.id("subject_et")).sendKeys("MACBOOK APP TESTING");
 	}
 
 	@Test(priority = 1)
 	public void AddPost() throws Exception {
-		driver.findElement(By.id("action_import")).click();
-		driver.findElement(By.id("subject_et")).sendKeys("MACBOOK APP TESTING");
+
 		driver.findElement(By.id("comment_et")).sendKeys("Hey All, I would like to share a post with frineds..!!");
 		driver.findElement(By.id("only_me_cb")).click();
 		driver.findElement(By.id("id_menu_done")).click();
@@ -38,8 +40,20 @@ public class AddPost {
 
 	@Test(priority = 2)
 	public void Verifypost() {
+
+		String addText = "Hey All, I would like to share a post with frineds..!!";
 		driver.scrollTo("Hey All, I would like to share a post with frineds..!!");
+		String textComparsion = driver
+				.findElement(By.xpath("//android.widget.RelativeLayout[@index='2'] OR [@id='social_info_tv']"))
+				.getText();
+		System.out.println("Print the value"+textComparsion);
 		driver.findElement(By.xpath("//android.widget.RelativeLayout[@index='2']")).click();
+
+		if (addText.equalsIgnoreCase(textComparsion)) {
+			System.out.println("Test case passed. Added the same post");
+		} else {
+			System.out.println("Test case failed. Post not added");
+		}
 
 		System.out.println("Added post successfullly");
 	}
@@ -55,11 +69,10 @@ public class AddPost {
 		driver.findElement(By.id("cmt_send")).click();
 
 	}
-
 	@Test(priority = 5)
-	public void sharepost() {
+	public void sharepost() throws Exception {
 		driver.findElement(By.id("share")).click();
-
+		AddPost();
 	}
 
 }
