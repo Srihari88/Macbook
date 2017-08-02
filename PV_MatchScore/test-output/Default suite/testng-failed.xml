@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Android.matchstats.AddPost">
+      <class name="com.Android.matchstats.MatchScoreVerification">
         <methods>
-          <include name="comment"/>
-          <include name="likepost"/>
-          <include name="sharepost"/>
-          <include name="Verifypost"/>
+          <include name="verifyBattingStrickerate"/>
+          <include name="verifyBowlingEconomy"/>
+          <include name="verifyBowingStrikerate"/>
         </methods>
-      </class> <!-- com.Android.matchstats.AddPost -->
+      </class> <!-- com.Android.matchstats.MatchScoreVerification -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

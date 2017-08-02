@@ -1,0 +1,79 @@
+package com.Android.matchstats;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class CreateNote {
+	public static AppiumDriver driver;
+
+	@Test(priority = 0)
+	public void OpenApp() throws MalformedURLException, Exception {
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/hearty.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		Thread.sleep(15000);
+	}
+
+	@Test(priority = 1)
+	public void TheFirstCreate() throws Exception {
+		ontextCreate();
+		ontextImage();
+		location();
+		NoteSecurityMode();
+		onClick();
+		Thread.sleep(5000);
+	}
+
+	private void onClick() {
+		driver.findElement(By.id("create_note")).click();
+	}
+
+	private void ontextCreate() throws Exception {
+		driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]"
+				+ "/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/"
+				+ "android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/"
+				+ "android.widget.ImageButton[1]")).click();
+		// driver.findElement(By.xpath("//android.widget.ImageButton[@index='0']")).click();
+		// driver.findElement(By.xpath("//android.widget.ImageView[@index='1']")).click();
+		driver.findElement(By.id("floatingActionButtonCreateNote")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("editTextNoteTitle")).sendKeys("First Automation code");
+		driver.findElement(By.id("editTextNoteStory")).sendKeys("This is the text I'm going to add as the text");
+	}
+
+	private void ontextImage() throws Exception {
+
+		driver.findElement(By.id("imageButtonSelectImages")).click();
+		driver.findElement(By.id("album_thumbnail")).click();
+		driver.findElement(By
+				.xpath("//android.widget.LinearLa yout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/"
+						+ "android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/"
+						+ "android.support.v7.widget.RecyclerView[1]/android.widget.FrameLayout[4]/android.widget.ImageView[1]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("fab_done")).click();
+	}
+
+	private void location() {
+		driver.findElement(By.id("imageButtonSelectLocation")).click();
+		driver.findElement(By.id("autoCompleteTextView")).sendKeys("Goa");
+		driver.findElement(By.id("textViewPlaceName")).click();
+		driver.findElement(By.id("buttonOK")).click();
+	}
+
+	private void NoteSecurityMode() {
+		driver.findElement(By.xpath("//android.widget.LinearLayout[@index='5']")).click();
+		driver.findElement(By.xpath("//android.widget.RelativeLayout[@index='1']")).click();
+	}
+}

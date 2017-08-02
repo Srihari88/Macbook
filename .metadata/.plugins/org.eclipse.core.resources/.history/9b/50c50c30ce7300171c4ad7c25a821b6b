@@ -1,0 +1,44 @@
+package com.Android.matchstats;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class CreateNote {
+	public static AppiumDriver driver;
+	
+	@Test(priority=0)
+	public void OpenApp() throws MalformedURLException, Exception {
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/stagedebug.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		Thread.sleep(15000);
+	}
+
+	@Test
+	public void OpenPVIcon() throws Exception{
+		
+		driver.findElement(By.id("tab_tv_plus")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Notes']")).click();
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	public CreateNote(){
+		driver.findElement(By.id("action_add_article")).click();
+		driver.findElement(By.id("et_session")).sendKeys("MyOwnbatting");
+		driver.findElement(By.id("notes_text")).sendKeys("Getting distrurb");
+	}
+
+}
