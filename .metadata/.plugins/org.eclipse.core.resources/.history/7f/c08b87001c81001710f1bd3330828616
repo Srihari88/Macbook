@@ -1,0 +1,61 @@
+package com.Android.matchstats;
+import java.net.MalformedURLException;
+import java.net.URL;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class MatchScoreVerification {
+	public static AppiumDriver driver;
+	
+	public float bowling_strikerate;
+	public float bowing_enconmy;
+	public float BattingstrikeRate;
+
+	@Test(priority=0)
+	public void OpenApp() throws MalformedURLException, Exception {
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		 capabilities.setCapability("testobject_api_key", "06B91B6FDF90435283723B4F367A30B5");
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "7.1.1");
+		capabilities.setCapability("deviceName", "");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/stagedebug.apk");
+		driver = new AndroidDriver(new URL("https://eu1.appium.testobject.com/wd/hub"), capabilities);
+		Thread.sleep(15000);
+	}
+
+	@Test(priority=1)
+	public void LoginApp() throws InterruptedException {
+		driver.findElement(By.id("et_email")).sendKeys("sree.hari");
+		driver.findElement(By.id("et_password")).sendKeys("9010satya");
+		driver.findElement(By.id("btn_login")).click();
+		Thread.sleep(5000);
+		WebElement contact = driver.findElement(By.id("com.pitchvision.stage.debug:id/indicator"));
+		int wide = contact.getSize().width;
+		int hgt = contact.getSize().height;
+
+		int startx = (int) (wide * (0.9));
+		int endx = (int) (wide * (0.2));
+		int starty = hgt / 2;
+		int endy = hgt / 2;
+
+		// To move from Fav to all contacts, we need to swipe from right to left
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+
+		driver.findElement(By.id("btn_continue")).click();
+
+		System.out.println("All user guide slides are moved.");
+	}
+	
+	
+}

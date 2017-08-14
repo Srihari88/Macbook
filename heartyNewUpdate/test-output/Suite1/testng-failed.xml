@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test name="AppStatusUpdate(failed)">
+    <classes>
+      <class name="com.Android.matchstats.Status">
+        <methods>
+          <include name="star"/>
+          <include name="StatusUpdate"/>
+          <include name="OpenApp"/>
+        </methods>
+      </class> <!-- com.Android.matchstats.Status -->
+    </classes>
+  </test> <!-- AppStatusUpdate(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

@@ -1,0 +1,66 @@
+package com.Android.matchstats;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class LoginHeartyNote {
+	public static AppiumDriver driver;
+
+	String Expected = "Invalid username or password";
+
+	@Test(priority = 0)
+	public void OpenApp() throws MalformedURLException, Exception {
+
+		/*DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/hearty.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		Thread.sleep(15000);*/
+		
+		Registration reg=new Registration();
+		
+		reg.OpenApp();
+	}
+
+	@Test(enabled=false)
+	public void Permissions() throws MalformedURLException, Exception {
+
+		// driver.findElement(By.id("permission_allow_button")).click();
+		driver.findElement(By.xpath("//android.widget.Button[@index='2']")).click();
+		driver.findElement(By.xpath("//android.widget.Button[@index='2']")).click();
+		driver.findElement(By.xpath("//android.widget.Button[@index='2']")).click();
+		driver.findElement(By.xpath("//android.widget.Button[@index='2']")).click();
+		driver.findElement(By.xpath("//android.widget.Button[@index='2']")).click();
+		System.out.println("All permissions accepted successfullly");
+	}
+
+	@Test(priority = 1)
+	public void Login() throws Exception {
+		driver.findElement(By.id("btn_static_login")).click();
+		driver.findElement(By.id("editTextLoginEmail")).sendKeys("sriharinaidu88+reg@gmail.com");
+		driver.findElement(By.id("editTextLoginPassword")).sendKeys("password");
+		driver.findElement(By.id("buttonSignIn")).click();
+
+		String str = driver.findElement(By.xpath("//android.widget.FrameLayout[@index='0']")).getText();
+		System.out.println("stored the values" +str);
+        Thread.sleep(4000);
+		if (str.equalsIgnoreCase(Expected)) {
+			System.out.println("LoggedIn failed");
+		} else {
+			System.out.println("LoggedIn Success");
+		}
+
+		driver.quit();
+	}
+
+}

@@ -1,0 +1,83 @@
+package com.Android.matchstats;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class WorkloadEntry {
+
+	public static AppiumDriver driver;
+
+	@Test(priority = 0)
+	public void OpenApp() throws MalformedURLException, Exception {
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/stagedebug.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		Thread.sleep(15000);
+	}
+
+	@Test(priority = 1)
+	public void Login() throws Exception {
+		driver.findElement(By.id("et_email")).sendKeys("david.davidson");
+		driver.findElement(By.id("et_password")).sendKeys("likewelt");
+		driver.findElement(By.id("btn_login")).click();
+		Thread.sleep(5000);
+		WebElement contact = driver.findElement(By.id("com.pitchvision.stage.debug:id/indicator"));
+		int wide = contact.getSize().width;
+		int hgt = contact.getSize().height;
+
+		int startx = (int) (wide * (0.9));
+		int endx = (int) (wide * (0.2));
+		int starty = hgt / 2;
+		int endy = hgt / 2;
+
+		// To move from Fav to all contacts, we need to swipe from right to left
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+		driver.swipe(startx, starty, endx, endy, 1000);
+
+		driver.findElement(By.id("btn_continue")).click();
+
+		System.out.println("All user guide slides are moved.");
+	}
+
+	@Test(priority = 2)
+	public void OpenWorkLoad() throws Exception {
+		driver.findElement(By.id("tab_tv_plus")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Workload Manager']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.id("action_import")).click();
+	}
+
+	@Test(priority = 3)
+	public void EnterWorkLaod() throws Exception {
+		driver.findElement(By.id("id_spinner_type")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Match']")).click();
+
+		driver.findElement(By.id("id_spinner_surface_type")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//android.widget.TextView[@index='2']")).click();
+
+		driver.findElement(By.id("id_no_of_bowler")).sendKeys("45");
+		driver.findElement(By.id("id_input_date")).click();
+		driver.findElement(By.id("button1")).click();
+		driver.findElement(By.id("save_button")).click();
+
+	}
+
+}

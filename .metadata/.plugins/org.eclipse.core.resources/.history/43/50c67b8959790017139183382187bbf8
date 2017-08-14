@@ -1,0 +1,44 @@
+package com.Android.matchstats;
+
+import java.net.MalformedURLException;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+
+
+public class ProfileUpload {
+
+	public static AppiumDriver driver;
+
+	@Test(priority = 0)
+	public void OpenApp() throws MalformedURLException, Exception {
+		Utils.OpenApp();
+	}
+
+	@Test(priority = 1)
+	public void ClickUpload() throws Exception {
+		driver.findElement(By.id("imageViewProfilePic")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("menuProfilePic")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.id("imageViewEditPics")).click();
+		driver.findElement(By.id("text1")).click();
+
+		driver.findElement(By.id("album_thumbnail")).click();
+		WebElement abc = driver.findElement(By.xpath("//android.widget.ImageView[@bounds='[4,404][236,644]']"));
+		abc.click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("fab_done")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.id("menu_crop")).click();
+		Thread.sleep(6000);
+		driver.findElement(By.id("buttonSaveProfilePic")).click();
+
+	}
+
+}
