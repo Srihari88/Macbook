@@ -1,0 +1,42 @@
+package com.Srihari.MavenFrameWork.LoginPage;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.Srihari.MavenFrameWork.testBase.testBase;
+import com.Srihari.MavenFrameWork.uiActions.HomePage;
+import com.Srihari.MavenFrameWork.uiActions.Newsfeed;
+
+public class TC0006_VerifythePostFunctions extends testBase {
+
+	HomePage home;
+	Newsfeed feed;
+
+	@BeforeTest
+	public void setup() {
+		init();
+	}
+
+	@Test
+	public void VerifyPostfunctions() throws Exception {
+
+		log.info("========Starting the TC002_VerifyRegistraion===== ");
+		HomePage home = new HomePage(driver);
+		home.RegisterApplication("Thone", "werese", "nononeu", "srisri.pudu+863@gmail.com", "password", "password");
+		log.info("========Finished the TC002_VerifyRegistraion===== ");
+		Thread.sleep(7000);
+
+		Newsfeed feed = new Newsfeed();
+
+		feed.SharePostOptions();
+		;
+
+	}
+
+	@AfterTest
+	public void endTest() {
+		// driver.close();
+	}
+
+}

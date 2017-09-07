@@ -1,0 +1,12 @@
+package com.Srihari.MavenFrameWork.testBase;
+
+import java.io.File;
+
+
+public class ExcelUtils {
+	
+	File src=new File("");
+	
+	FileInputStream fis=new FileInputStream(src);
+
+}

@@ -6,12 +6,15 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="SriHari" key="selection"/>
+		<item value="ClickPortal" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ClickPortal"/>
+			<item value="driver"/>
+			<item value="init"/>
 			<item value="SriHari"/>
 			<item value="//button[contains(text(),&apos;Add New&apos;)]"/>
 		</list>

@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.Srihari.MavenFrameWork"/>
 			<item value="Match_Score"/>
 			<item value="MavanProjectNotRunning"/>
 			<item value="IphoneCucumber"/>
@@ -13,6 +14,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="com.Srihari.MavenFrameWork"/>
 			<item value="Match_Score"/>
 			<item value="MavanProjectNotRunning"/>
 			<item value="IphoneCucumber"/>

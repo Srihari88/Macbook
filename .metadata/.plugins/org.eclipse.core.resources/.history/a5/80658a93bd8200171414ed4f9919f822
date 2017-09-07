@@ -1,0 +1,36 @@
+package com.heartynote;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class Hearynote_Login {
+
+	AndroidDriver driver;
+	String errorMessage = "Invalid details";
+
+	@Test(priority = 0)
+	public void OpenApps() throws Exception, Exception {
+		Utils.OpenApp();
+
+	}
+
+	@Test(priority = 1)
+
+	public void loginApp() {
+		driver.findElement(By.id("inputUsername")).sendKeys("sriharinaidu88@gmail.com");
+		driver.findElement(By.id("inputPassword")).sendKeys("7500705323");
+		driver.findElement(By.id("createAccount")).click();
+		String validError = driver.findElement(By.id("errorMessage")).getText();
+
+		if (errorMessage.equals(validError)) {
+			System.out.println("Invalid details");
+		} else {
+			System.out.println("Logged in success");
+		}
+	}
+
+}

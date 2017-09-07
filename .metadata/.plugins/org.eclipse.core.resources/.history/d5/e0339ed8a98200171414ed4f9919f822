@@ -1,0 +1,44 @@
+package com.heartynote;
+
+import org.openqa.selenium.By;
+
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+
+public class Heartynote_Register {
+	AppiumDriver driver;
+
+	String EmailError = "Invalid email";
+
+	@Test(priority = 0)
+	public void Start1() throws Exception, Exception {
+
+		driver = Utils.OpenApp();
+
+	}
+
+	@Test(priority = 1)
+	public void Registratoin() throws Exception, Exception {
+		System.out.println(" Reached");
+		Thread.sleep(2000);
+		driver.findElement(By.id("btn_static_signup")).click();
+		// Thread.sleep(2000);
+
+		driver.findElement(By.id("emailNext")).click();
+
+		String EmailValidatinEror = driver.findElement(By.id("errorMessage")).getText();
+
+		if (EmailError.equals(EmailValidatinEror)) {
+			System.out.println("Please enter the correct email address..!!");
+		}
+
+		else {
+			driver.findElement(By.id("inputEmail")).sendKeys("sriharinaidu88+lol@gmail.com");
+			driver.findElement(By.id("emailNext")).click();
+			System.out.println("Please enter the correct passsword");
+		}
+
+	}
+
+}

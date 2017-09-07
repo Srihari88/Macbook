@@ -1,0 +1,368 @@
+package com.Srihari.MavenFrameWork.uiActions;
+
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class HomePage {
+
+	WebDriver driver;
+
+	public static final Logger log = Logger.getLogger(HomePage.class.getName());
+
+	// ====User Login====
+
+	@FindBy(xpath = ".//*[@id='site-head']/ul[2]/li/a")
+	WebElement ClickLogin;
+
+	@FindBy(xpath = ".//*[@id='login-modal']/div[2]/div/pv-login/div/div/div[2]/div/form/div[1]/div[1]/div/div[2]/input")
+	WebElement Username;
+
+	@FindBy(xpath = ".//*[@id='password']")
+	WebElement Password;
+
+	@FindBy(xpath = "//button[@class='width-35 pull-right btn btn-sm btn-primary main-reg-log-submit']")
+	WebElement Submit;
+
+	// ====User registration page===
+
+	@FindBy(xpath = ".//*[@id='login-modal']/div[2]/div/pv-login/div/div/div[2]/div/form/div[2]/span/a")
+	WebElement clickRegister;
+
+	@FindBy(name = "first_name")
+	WebElement Enter_Fname;
+
+	@FindBy(name = "last_name")
+	WebElement Enter_Lname;
+
+	@FindBy(name = "nickname")
+	WebElement Enter_Kname;
+
+	@FindBy(name = "email")
+	WebElement Enter_email;
+
+	@FindBy(xpath = ".//*[@id='password']")
+	WebElement Enter_pwd;
+
+	@FindBy(xpath = ".//*[@id='repassword']")
+	WebElement Enter_Repwd;
+
+	@FindBy(xpath = ".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/input")
+	WebElement Click_DOB;
+
+	@FindBy(xpath = ".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/ul/li[2]/span/button[1]")
+	WebElement Select_Today;
+
+	@FindBy(xpath = ".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[7]/button")
+	WebElement Register;
+
+	public void dropdown() {
+		Select gender = new Select(driver.findElement(By.id("gender")));
+		gender.selectByVisibleText("Male");
+
+	}
+
+	public void dateSet() {
+		int i;
+		for (i = 1; i <= 50; i++) {
+			driver.findElement(By
+					.xpath(".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/ul/li[1]/div/table/thead/tr[1]/th[1]"))
+					.click();
+
+		}
+	}
+
+	public void Refresh() {
+		driver.navigate().refresh();
+	}
+
+	@FindBy(xpath = "//div[contains(text(),'Please specify correct date of birth')]")
+	WebElement DateVerificationText;
+
+	public void DoB() {
+		List<WebElement> dates = driver.findElements(By.xpath(
+				".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/ul/li[1]/div/table/tbody/tr/td"));
+		int total_node = dates.size();
+		for (int i = 0; i < total_node; i++) {
+			String date = dates.get(i).getText();
+			if (date.equals("15")) {
+				dates.get(i).click();
+				break;
+			}
+		}
+
+	}
+
+	@FindBy(xpath = "//span[contains(text(),'Register')]")
+	WebElement RegisterPlayer;
+
+	@FindBy(xpath = "//div[contains(text(),’Thanks for registering with us - please check your mail.’)")
+	WebElement SuccessRegister;
+
+	// ======Create a post======
+
+	@FindBy(xpath = ".//*[@id='site-head']/ul[2]/li[1]")
+	WebElement ClickOnPostButton;
+
+	@FindBy(xpath = ".//*[@id='shareMessagesubject']")
+	WebElement Enter_Sub;
+
+	@FindBy(xpath = ".//*[@id='tab-linearrow-photo']/share-message/div/div/div[1]/div[2]/div/textarea")
+	WebElement Enter_Conversation;
+
+	@FindBy(xpath = ".//*[@id='tab-linearrow-photo']/share-message/div/div/div[2]/div/div/div[2]")
+	WebElement Select_Audience;
+
+	@FindBy(xpath = ".//*[@id='tab-linearrow-photo']/share-message/div/div/div[2]/div/div/div[3]/div[3]/table/tbody/tr/td[1]/div/label/span/span")
+	WebElement Select_Onlyme;
+
+	@FindBy(xpath = ".//*[@id='tab-linearrow-photo']/share-message/div/div/div[2]/div/span")
+	WebElement Share_Post;
+
+	// ======Go to the portal and create the match stats for the user//
+
+	@FindBy(xpath = "//span[contains(text(),'Portal')]")
+	WebElement ClickPortal;
+
+	@FindBy(xpath = "//a[contains(text(),'Match Stats')]")
+	WebElement Click_MatchScore;
+
+	@FindBy(xpath = "//button[contains(text(),'Add New')]")
+	WebElement Add_MatchScroe;
+
+	@FindBy(xpath = ".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/input")
+	WebElement SelDate;
+
+	public void SelectDate() {
+		driver.findElement(By
+				.xpath(".//*[@id='playerMatchStatContent']/pv-add-portal-player-stat/div/div[2]/form/div/div[1]/div[2]/div/div/input"))
+				.click();
+
+		List<WebElement> dates = driver.findElements(By.xpath(
+				".//*[@id='playerMatchStatContent']/pv-add-portal-player-stat/div/div[2]/form/div/div[1]/div[2]/div/div/ul/li/div/table/tbody/tr/td"));
+		int total_node = dates.size();
+		for (int i = 0; i < total_node; i++) {
+			String date = dates.get(i).getText();
+			if (date.equals("28")) {
+				dates.get(i).click();
+				break;
+			}
+		}
+	}
+
+	@FindBy(name = "opposite")
+	WebElement Enter_Opposition;
+
+	@FindBy(name = "league")
+	WebElement Enter_League;
+
+	@FindBy(name = "venue")
+	WebElement Enter_Venue;
+
+	@FindBy(name = "match_type")
+	WebElement Enter_matchType;
+
+	public void match_format() {
+		Select Mformat = new Select(driver.findElement(By.id("match_style")));
+		Mformat.selectByVisibleText("T20");
+	}
+
+	public void match_grade() {
+		Select Mgrade = new Select(driver.findElement(By.id("match_grade")));
+		Mgrade.selectByVisibleText("School");
+	}
+
+	@FindBy(name = "team")
+	WebElement Enter_teamname;
+
+	public void Result() {
+		Select Rest = new Select(driver.findElement(By.id("result")));
+		Rest.selectByVisibleText("Lost");
+	}
+
+	public void Surface() {
+		Select Surface_type = new Select(driver.findElement(By.id("surface_type")));
+		Surface_type.selectByVisibleText("Grass");
+	}
+
+	public void Position() {
+		Select Batsman_position = new Select(driver.findElement(By.id("batting_position")));
+		Batsman_position.selectByVisibleText("4");
+	}
+
+	@FindBy(name = "batting_runs")
+	WebElement Batting_runs;
+
+	@FindBy(name = "batting_balls_faced")
+	WebElement Batting_ballsfaced;
+
+	public void HowOut() {
+		Select Batsman_position = new Select(driver.findElement(By.name("batting_how_out")));
+		Batsman_position.selectByVisibleText("Bowled");
+	}
+
+	@FindBy(name = "bowling_overs")
+	WebElement Bowling_Overs;
+
+	@FindBy(name = "bowling_runs")
+	WebElement Bowling_Runs;
+
+	@FindBy(name = "bowling_wickets")
+	WebElement Bowling_wickets;
+
+	@FindBy(name = "bowling_wides")
+	WebElement Bowling_Wides;
+
+	@FindBy(name = "bowling_no_balls")
+	WebElement Bowling_noballs;
+
+	@FindBy(name = "fielding_catches")
+	WebElement Fielding_catchs;
+
+	@FindBy(name = "fielding_stumpings")
+	WebElement Fielding_Stumpings;
+
+	@FindBy(name = "fielding_run_outs")
+	WebElement Fielding_Runouts;
+
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	public void LoginApplication(String Uname, String pwd) {
+		ClickLogin.click();
+		log.info("Click on the login button and the object is" + ClickLogin);
+		Username.sendKeys(Uname);
+		log.info("Enter the username and the object is" + Username);
+		Password.sendKeys(pwd);
+		log.info("Enter the password and the object is " + Password);
+		Submit.click();
+		log.info("Submit the form button and the object is " + Submit);
+
+	}
+
+	public void RegisterApplication(String Fname, String Lname, String Kame, String email, String pwd, String repwd) {
+
+		ClickLogin.click();
+		log.info("Click on the login link" + ClickLogin);
+		clickRegister.click();
+		log.info("Click on the register link" + clickRegister);
+		Enter_Fname.sendKeys(Fname);
+		log.info("Enter the first name of the Field " + Enter_Fname);
+		Enter_Lname.sendKeys(Lname);
+		log.info("Enter the last name of the Field " + Enter_Lname);
+		Enter_Kname.sendKeys(Kame);
+		log.info("Enter the nick name of the Filed " + Enter_Kname);
+		Enter_email.sendKeys(email);
+		log.info("Enter the email of the Field " + Enter_email);
+		Enter_pwd.sendKeys(pwd);
+		log.info("Enter the passwrod of the Filed" + Enter_pwd);
+		Enter_Repwd.sendKeys(repwd);
+		log.info("Reenter the password of the Field " + Enter_Repwd);
+		dropdown();
+		Click_DOB.click();
+		dateSet();
+		DoB();
+		RegisterPlayer.click();
+		SuccessRegister.getText();
+		System.out.println(SuccessRegister.getText());
+		Refresh();
+
+	}
+
+	public void shortName_Validtion(String Fname, String Lname, String Kame, String email, String pwd, String repwd) {
+		ClickLogin.click();
+		log.info("Click on the login link" + ClickLogin);
+		clickRegister.click();
+		log.info("Click on the register link" + clickRegister);
+		Enter_Fname.sendKeys(Fname);
+		log.info("Enter the first name of the Field " + Enter_Fname);
+		Enter_Lname.sendKeys(Lname);
+		log.info("Enter the last name of the Field " + Enter_Lname);
+		Enter_Kname.sendKeys(Kame);
+		log.info("Enter the nick name of the Filed " + Enter_Kname);
+		Enter_email.sendKeys(email);
+		log.info("Enter the email of the Field " + Enter_email);
+		Enter_pwd.sendKeys(pwd);
+		log.info("Enter the passwrod of the Filed" + Enter_pwd);
+		Enter_Repwd.sendKeys(repwd);
+		log.info("Reenter the password of the Field " + Enter_Repwd);
+		dropdown();
+		Click_DOB.click();
+		dateSet();
+		DoB();
+		RegisterPlayer.click();
+		SuccessRegister.getText();
+		System.out.println(SuccessRegister.getText());
+		Refresh();
+
+
+	}
+
+	public void Share_post(String Sub, String Conversation) {
+		ClickOnPostButton.click();
+		Enter_Sub.sendKeys(Sub);
+		Enter_Conversation.sendKeys(Conversation);
+		Select_Audience.click();
+		Select_Onlyme.click();
+		Share_Post.click();
+
+	}
+
+	public void EnterMatchScoreDetails(String oppo, String Leg, String vnu, String mname, String tname, String bruns,
+			String bfaced, String bovers, String bowRuns, String BowWikt, String Wds, String nob, String cat,
+			String stmp, String runout) throws Exception {
+
+		ClickPortal.click();
+		log.info("Clicked on the portal navigation ");
+
+		Thread.sleep(4000);
+		System.out.println("Reached the step");
+		Click_MatchScore.click();
+		log.info("Clicked on the match scroe button " + Click_MatchScore);
+		System.out.println("After clicked, Reached the step");
+		Add_MatchScroe.click();
+		log.info("Clicked on the Add match score button " + Add_MatchScroe);
+		Thread.sleep(3000);
+		SelectDate();
+		log.info("Selecte the respective date ");
+		Enter_Opposition.sendKeys(oppo);
+		log.info("Enter the opposition name " + Enter_Opposition);
+		Enter_League.sendKeys(Leg);
+		log.info("Enter the league name " + Enter_League);
+		Enter_Venue.sendKeys(vnu);
+		log.info("Enter the Venue name " + Enter_Venue);
+		Enter_matchType.sendKeys(mname);
+		log.info("Enter matchType " + Enter_matchType);
+		match_format();
+		log.info("Enter the matchformat ");
+		match_grade();
+		Enter_teamname.sendKeys(tname);
+		Result();
+		Surface();
+
+		Position();
+		Batting_runs.sendKeys(bruns);
+		Batting_ballsfaced.sendKeys(bfaced);
+		HowOut();
+
+		Bowling_Overs.sendKeys(bovers);
+		Bowling_Runs.sendKeys(bowRuns);
+		Bowling_wickets.sendKeys(BowWikt);
+		Bowling_Wides.sendKeys(Wds);
+		Bowling_noballs.sendKeys(nob);
+
+		Fielding_catchs.sendKeys(cat);
+		Fielding_Stumpings.sendKeys(stmp);
+		Fielding_Runouts.sendKeys(runout);
+	}
+
+}

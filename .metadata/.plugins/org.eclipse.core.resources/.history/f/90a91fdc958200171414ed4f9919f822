@@ -1,0 +1,15 @@
+package com.heartynote;
+
+import java.io.IOException;
+
+
+import org.testng.annotations.Test;
+
+public class StartApp {
+
+	@Test(priority = 0)
+	public void Open_HearynoteApp() throws IOException, Exception {
+		Utils.OpenApp();
+
+	}
+}

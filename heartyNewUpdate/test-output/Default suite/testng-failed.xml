@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.Android.matchstats.LoginHeartyNote">
+      <class name="com.Android.matchstats.BannerUpload">
         <methods>
-          <include name="Login"/>
+          <include name="OpenApp"/>
+          <include name="ClickUpload"/>
         </methods>
-      </class> <!-- com.Android.matchstats.LoginHeartyNote -->
+      </class> <!-- com.Android.matchstats.BannerUpload -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

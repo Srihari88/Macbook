@@ -1,0 +1,48 @@
+package com.heartynote;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+public class Heartynote_Register {
+	AppiumDriver driver;
+
+	String EmailError = "Invalid email";
+
+	@Test(priority = 0)
+	public void Start1() throws Exception, Exception {
+
+		 Utils.OpenApp();
+
+		/*DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("appium-version", "1.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "6.0");
+		capabilities.setCapability("deviceName", "S6");
+		capabilities.setCapability("app", "/Users/reenupanwar/Desktop/builds/ReleaseApp.apk");
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		Thread.sleep(15000);*/
+
+	}
+
+	@Test(priority = 1)
+	public void Registratoin() throws Exception, Exception {
+		System.out.println(" Reached");
+		driver.findElement(By.id("btn_static_signup")).click();
+		Thread.sleep(2000);
+
+		// String EmailValidatinEror =
+		// driver.findElement(By.id("errorMessage")).getText();
+
+		driver.findElement(By.id("inputEmail")).sendKeys("sriharinaidu88+lol@gmail.com");
+		driver.findElement(By.id("emailNext")).click();
+
+	}
+
+}

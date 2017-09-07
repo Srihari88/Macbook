@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+
+public class TextPractice {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.hdfcbank.com/");
+
+		ArrayList<String> ExpectedArray = new ArrayList<String>();
+		ExpectedArray.add("Credit Card");
+		ExpectedArray.add("Personal Loan");
+		ExpectedArray.add("Two Wheeler Loan");
+		ExpectedArray.add("Car Loan");
+		ExpectedArray.add("Home Loan");
+
+		List<WebElement> totaltext = driver.findElements(By.id(".//*[@id='hometab1']/div[1]/div[3]/div/ul/li"));
+
+	}
+
+}
+
+/*
+ * List<WebElement> totaltext =
+ * driver.findElements(By.xpath(".//*[@id='hometab1']/div[1]/div[1]/div/ul/li"))
+ * ;
+ * 
+ * Iterator<WebElement> itr = totaltext.iterator();
+ * 
+ * ArrayList<String> Actualarry = new ArrayList<String>();
+ * 
+ * while (itr.hasNext()) { Actualarry.add(itr.next().getText());
+ * 
+ * } Assert.assertEquals(ExpectedArray, Actualarry);
+ * 
+ * System.out.println("User expected result is:- " + ExpectedArray);
+ * System.out.println("Website result after running the program:- " +
+ * Actualarry);
+ */

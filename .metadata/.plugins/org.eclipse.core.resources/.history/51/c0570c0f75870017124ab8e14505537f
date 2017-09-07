@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TextPractice {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.hdfcbank.com/");
+
+		ArrayList<String> ActualResult = new ArrayList<String>();
+	}
+}
