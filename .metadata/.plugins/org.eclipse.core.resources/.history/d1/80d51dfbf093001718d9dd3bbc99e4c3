@@ -1,0 +1,39 @@
+package com.Srihari.MavenFrameWork.Workload;
+
+import java.util.logging.Logger;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.Srihari.MavenFrameWork.LoginPage.TC001_vefifyLoginPageWithInvalidCredentials;
+import com.Srihari.MavenFrameWork.testBase.testBase;
+import com.Srihari.MavenFrameWork.uiActions.HomePage;
+
+public class TC_01_OpenWorkLoad extends testBase {
+
+	HomePage home;
+	public static final Logger log = Logger.getLogger(TC001_vefifyLoginPageWithInvalidCredentials.class.getName());
+
+	@BeforeTest
+	public void setup() {
+		init();
+	}
+
+	@Test
+	public void OpenWorkload() throws Exception {
+
+		log.info("========Starting the test case with correct valid details=====");
+		HomePage home = new HomePage(driver);
+		home.LoginApplication("sree.hari", "9010satya");
+		log.info("========Finished the test case correct details =====");
+		Thread.sleep(10000);
+
+	}
+
+	@AfterTest
+	public void endTest() {
+		// driver.close();
+	}
+
+}

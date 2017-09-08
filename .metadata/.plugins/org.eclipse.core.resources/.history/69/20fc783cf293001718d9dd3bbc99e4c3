@@ -1,0 +1,33 @@
+package com.Srihari.MavenFrameWork.uiActions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Workload {
+	WebDriver driver;
+	Actions action;
+
+	public Workload(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	public void moveMousetoWorkload() {
+		action = new Actions(driver);
+		WebElement mouse = driver.findElement(By.xpath("//a[@class='fs-14 center-block accordion-toggle']"));
+		action.moveToElement(mouse).build().perform();
+
+	}
+	
+	@FindBy(xpath="//div[@id='content']/div/div/div[1]/div[2]/div/div[3]/div[5]/div/div/div/div/div/a")
+	WebElement clickOnWorkLoad;
+	
+	
+	
+	
+
+}
