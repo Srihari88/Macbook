@@ -1,0 +1,15 @@
+public class Naify {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int i = 0;
+
+		for (System.out.println("Hello boss u r sleeping"); i < 3; i++) {
+
+			System.out.println("Hell boss I'm not sleeping");
+
+		}
+	}
+
+}

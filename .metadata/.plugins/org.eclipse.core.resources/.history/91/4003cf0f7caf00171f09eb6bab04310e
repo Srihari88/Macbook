@@ -1,0 +1,19 @@
+public class Naify {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   System.out.println("Hello");
+   
+   int x=10;
+   
+   boolean b=true;
+   
+   if(b=false){
+	   System.out.println("Nice one");
+   }
+   else
+	   System.out.println("Not nice one");
+	   
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class Naify {
+
+	public static void Sri(String[] args) {
+		// TODO Auto-generated method stub
+   System.out.println("Hello");
+	}
+
+}

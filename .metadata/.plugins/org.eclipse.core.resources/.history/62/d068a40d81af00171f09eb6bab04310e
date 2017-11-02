@@ -1,0 +1,21 @@
+public class Naify {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello");
+
+		int x = 10;
+
+		switch (x = 10) {
+
+		case 2:
+			System.out.println("Hell all");
+
+		case 3:
+			System.out.println("All one");
+
+		}
+
+	}
+
+}

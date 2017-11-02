@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;MatchStatus_Android_OS/src/stagedebug.apk&apos; to &apos;Recentapp.apk&apos;" description="Rename resource &apos;stagedebug.apk&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/stagedebug.apk" name="Recentapp.apk" stamp="1504980739804" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;MatchStatus_Android_OS/stagedebug.apk&apos; to &apos;Recentapp.apk&apos;" description="Rename resource &apos;stagedebug.apk&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="stagedebug.apk" name="Recentapp.apk" stamp="1504980782396" updateReferences="true"/>
+</session>

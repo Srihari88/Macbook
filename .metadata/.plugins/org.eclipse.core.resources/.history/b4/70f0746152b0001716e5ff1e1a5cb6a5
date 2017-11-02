@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Retangle {
+
+	public static void maiin(String[] args) {
+		
+
+	
+	}
+
+}
