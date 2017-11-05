@@ -1,0 +1,140 @@
+package com.Srihari.MavenFrameWork.uiActions;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class Workload {
+	WebDriver driver;
+	Actions action;
+
+	public Workload(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	public void moveMousetoWorkload() {
+		action = new Actions(driver);
+		WebElement mouse = driver.findElement(By.xpath("//div[@class='player-btn-last custom-btn']"));
+		action.moveToElement(mouse).build().perform();
+		System.out.println("Hello step reached..!!");
+
+	}
+	
+	public void WorkLoad(){
+		action=new Actions(driver);
+		WebElement wl=driver.findElement(By.xpath(".//*[@id='content']/div/div/div[1]/div[2]/div/div[3]/div[5]/div/div/div/a"));
+		action.moveToElement(wl).build().perform();
+	}
+
+	public void ClickOnWorkLoadOne() {
+		try{
+		action = new Actions(driver);
+		WebElement clickWLM = driver.findElement(
+				By.xpath(".//*[@id='content']/div/div/div[1]/div[2]/div/div[3]/div[5]/div/div/div/div/div/a"));
+		action.moveToElement(clickWLM).build().perform();
+		clickWLM.click();
+		}catch(MoveTargetOutOfBoundsException e){
+			System.out.println("Throws the MoveTargetOutOfBoundsException Exception");
+		}
+	}
+
+	@FindBy(xpath = "//a[@id='add-workload']")
+	WebElement Click_Workload;
+
+	public void SelectDate() {
+		driver.findElement(By
+				.xpath(".//*[@id='playerWorkloadModal']/div[2]/div/div[2]/div/div[3]/div/div/div[1]/div[2]/div/div/form/div[1]/div[1]/div/div/input"))
+				.click();
+
+		List<WebElement> dates = driver.findElements(By.xpath(
+				".//*[@id='playerWorkloadModal']/div[2]/div/div[2]/div/div[3]/div/div/div[1]/div[2]/div/div/form/div[1]/div[1]/div/div/ul/li[1]/div/table/tbody/tr/td"));
+		int total_node = dates.size();
+		for (int i = 0; i < total_node; i++) {
+			String date = dates.get(i).getText();
+			if (date.equals("28")) {
+				dates.get(i).click();
+				break;
+			}
+		}
+	}
+
+	@FindBy(xpath = "//input[@name='balls']")
+	WebElement Enter_Balls;
+
+	@FindBy(xpath = ".//*[@id='radio_0']/div[1]/div[1]")
+	WebElement Click_Match_Radiobutton;
+
+	public void Surface() {
+
+		Select surf = new Select(driver.findElement(By.xpath("//select[@name='surface_type']")));
+		surf.selectByVisibleText("Grass Surface");
+	}
+
+	public void IndoorLeague() {
+
+		Select surf = new Select(driver.findElement(By.xpath("//select[@name='surface_type']")));
+		surf.selectByVisibleText("Indoor League");
+	}
+
+	@FindBy(xpath = ".//*[@id='playerWorkloadModal']/div[2]/div/div[2]/div/div[3]/div/div/div[1]/div[2]/div/div/form/div[2]/div/button")
+	WebElement Save;
+
+	@FindBy(xpath = ".//*[@id='playerWorkloadModal']/div[2]/div/div[2]/div/div[1]/div/div/div[3]/button[2]")
+	WebElement Weekly;
+
+	@FindBy(xpath = "//*[@id='playerWorkloadModal']/div[2]/div/div[2]/div/div[1]/div/div/div[3]/button[4]")
+	WebElement Chronic;
+
+	@FindBy(xpath = ".//*[@id='playerWorkloadModal']/div[2]/div/div[2]/div/div[1]/div/div/div[3]/button[5]")
+	WebElement Monthly;
+
+	@FindBy(xpath = ".//*[@id='playerWorkloadModal']/div[2]/div/div[2]/div/div[1]/div/div/div[3]/button[3]")
+	WebElement RollingWeek;
+
+	public void M_mouse() {
+		moveMousetoWorkload();
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		ClickOnWorkLoadOne();
+
+	}
+
+	public void WorkLoadManagementEntiy(String balls) {
+		Click_Workload.click();
+		SelectDate();
+		Enter_Balls.sendKeys(balls);
+		Click_Match_Radiobutton.click();
+		Surface();
+		Save.click();
+
+	}
+
+	public void WorkLoadManagenetIndoor(String balls) {
+		Click_Workload.click();
+		SelectDate();
+		Enter_Balls.sendKeys(balls);
+		Click_Match_Radiobutton.click();
+		IndoorLeague();
+		Save.click();
+
+	}
+
+	public void Changetabs() throws Exception {
+		Weekly.click();
+		Thread.sleep(2000);
+		Chronic.click();
+		Thread.sleep(2000);
+		Monthly.click();
+		Thread.sleep(2000);
+		RollingWeek.click();
+	}
+
+}

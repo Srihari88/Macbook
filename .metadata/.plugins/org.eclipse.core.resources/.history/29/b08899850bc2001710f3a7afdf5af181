@@ -1,0 +1,29 @@
+package com.Srihari.MavenFrameWork.LoginPage;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.Srihari.MavenFrameWork.testBase.testBase;
+import com.Srihari.MavenFrameWork.uiActions.HomePage;
+
+public class RegWithOrganisationName extends testBase {
+
+	HomePage home;
+	// testBase tb;
+
+	@BeforeTest
+	public void setup() {
+		init();
+	}
+
+	@Test
+	public void VerifyRegistraion() throws Exception {
+
+		HomePage home = new HomePage(driver);
+		home.RegisterApplication("Thrors", "couyeZ", "koKriu", "srisri.pudu+8503@gmail.com", "password", "password");
+		Thread.sleep(7000);
+		home.Refresh();
+		home.shortName_Validtion("Alol", "oeWorld", "Fddu", "srisri.pudu+64@gmail.com", "password", "password");
+	}
+
+}

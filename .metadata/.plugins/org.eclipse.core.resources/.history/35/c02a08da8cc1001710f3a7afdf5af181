@@ -1,0 +1,34 @@
+package com.Srihari.MavenFrameWork.LoginPage;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.Srihari.MavenFrameWork.testBase.testBase;
+import com.Srihari.MavenFrameWork.uiActions.HomePage;
+
+public class TC005_SideStripeNig extends testBase {
+
+	HomePage home;
+
+	@BeforeTest
+	public void Setup() {
+		init();
+	}
+
+	@Test
+	public void SideStripeNig() throws Exception {
+		log.info("========Starting the vefifying the side navigation=====");
+		home = new HomePage(driver);
+		home.LoginApplication("david.davidson", "likewelt");
+		log.info("========Finished the Side navigation =====");
+		home.CheckAllLinks();
+
+	}
+
+	@AfterTest
+	public void EndDriver() {
+		// driver.close();
+	}
+}
