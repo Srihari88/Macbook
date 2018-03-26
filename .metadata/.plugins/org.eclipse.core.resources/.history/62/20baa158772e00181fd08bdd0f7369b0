@@ -1,0 +1,50 @@
+package BasicSelenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class CheckAllLinks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriver wd = new FirefoxDriver();
+
+		wd.get("https://www.pitchvision.com/");
+		wd.findElement(By.linkText("Login")).click();
+		wd.findElement(By.name("username")).clear();
+		wd.findElement(By.name("username")).sendKeys("arun.b");
+		wd.findElement(By.id("password")).clear();
+		wd.findElement(By.id("password")).sendKeys("thakdkdk");
+		wd.findElement(By.xpath("//div[@class='modal-body']/div[4]/div/button")).click();
+
+		List<WebElement> WebtotalLinks = wd.findElements(By.xpath("//a"));
+
+		System.out.println(WebtotalLinks.size());
+
+		String[] totalTexts = new String[WebtotalLinks.size()];
+
+		int i = 0;
+		for (WebElement e : WebtotalLinks) {
+			totalTexts[i] = e.getText();
+			i++;
+		}
+
+		// Test each link
+
+		for (String t : totalTexts) {
+			driver.findElement(By.linkText(t)).click();
+			if (driver.getTitle().contains("Not Found")) {
+				System.out.println(t + " Broken the link.");
+			} else {
+				System.out.println("\"" + t + "\"" + " is working.");
+			}
+		}
+
+	}
+
+}

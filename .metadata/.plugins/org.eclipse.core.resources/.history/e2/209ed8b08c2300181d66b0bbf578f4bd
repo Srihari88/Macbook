@@ -1,0 +1,39 @@
+
+/**
+ * 
+ * @author Srihari Naidu
+ *        Test Script 01
+ *        ************** 
+ *        Test Steps
+ *        1)  Go to http://www.demo.guru99.com/V4/
+          2) Enter valid UserId
+          3) Enter valid Password
+          4) Click Login
+ */
+
+
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SS1 {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.demo.guru99.com/V4/");
+
+		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys("mngr121789");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("vugEryg");
+
+		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+
+		Thread.sleep(5000);
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+
+	}
+}

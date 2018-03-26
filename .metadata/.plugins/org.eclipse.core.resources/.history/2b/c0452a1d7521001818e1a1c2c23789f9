@@ -1,0 +1,6 @@
+
+abstract class JavaPractice {
+	
+	abstract void m1();
+
+}

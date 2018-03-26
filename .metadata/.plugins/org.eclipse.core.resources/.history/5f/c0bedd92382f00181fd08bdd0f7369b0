@@ -1,0 +1,27 @@
+package ArrayProgramsPractice;
+
+public class Contains {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] ary = { 1234, 5432, 5643, 5644, 6576, 7685 };
+
+		System.out.println(ary.toString());
+
+	//	System.out.println(contains(ary, 1234));
+
+	}
+
+	private static boolean contains(int[] ary, int item) {
+		// TODO Auto-generated method stub
+
+		for (int n : ary) {
+			if (item == n) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+}

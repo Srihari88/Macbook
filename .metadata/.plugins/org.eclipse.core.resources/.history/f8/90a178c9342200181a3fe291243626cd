@@ -1,0 +1,16 @@
+
+class SuperKeyword {
+
+	void set() {
+		System.out.println("Set the all values");
+	}
+}
+
+class NameSet extends SuperKeyword {
+
+	void set() {
+		super.set();
+		System.out.println(" Set child class");
+	}
+
+}

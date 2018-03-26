@@ -1,0 +1,21 @@
+package Listners;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+public class MouseEvents {
+
+	WebDriver driver;
+
+	@Test
+	public void mouse() throws InterruptedException {
+		driver = new FirefoxDriver();
+		driver.get("https://www.flipkart.com/");
+
+		Actions action = new Actions(driver);
+
+	}
+
+}

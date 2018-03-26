@@ -1,0 +1,339 @@
+package com.PageObjectModel.FrameWork.uiActions;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class HomePage {
+
+	WebDriver driver;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	@CacheLookup
+	WebElement RegisterButton;
+
+	@FindBy(css = "input[name='first_name']")
+	@CacheLookup
+	WebElement FirstName;
+
+	@FindBy(css = "input[name='last_name']")
+	@CacheLookup
+	WebElement LastName;
+
+	@FindBy(css = "input[name='nickname']")
+	@CacheLookup
+	WebElement NickName;
+
+	@FindBy(css = "input[name='email']")
+	@CacheLookup
+	WebElement Email;
+
+	@FindBy(css = ".reg-switch")
+	@CacheLookup
+	WebElement OrgCheck;
+
+	@FindBy(css = "input[name='orgName']")
+	@CacheLookup
+	WebElement Organization;
+
+	@FindBy(css = "input[name='password']")
+	@CacheLookup
+	WebElement password;
+
+	@FindBy(css = "input[name='repassword']")
+	@CacheLookup
+	WebElement retypepassword;
+
+	@FindBy(css = "select[name='gender']")
+	@CacheLookup
+	WebElement Gender;
+
+	public void Genderdropdown() {
+		Select gender = new Select(driver.findElement(By.id("gender")));
+		gender.selectByIndex(1);
+
+	}
+
+	@FindBy(css = "input[placeholder='yyyy-mm-dd']")
+	@CacheLookup
+	WebElement DateofBirth;
+
+	public void dateSet() {
+		int i;
+		for (i = 1; i <= 50; i++) {
+			driver.findElement(By
+					.xpath(".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/ul/li[1]/div/table/thead/tr[1]/th[1]"))
+					.click();
+
+		}
+	}
+
+	public void DoB() {
+		List<WebElement> dates = driver.findElements(By.xpath(
+				".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/ul/li[1]/div/table/tbody/tr/td"));
+		int total_node = dates.size();
+		for (int i = 0; i < total_node; i++) {
+			String date = dates.get(i).getText();
+			if (date.equals("15")) {
+				dates.get(i).click();
+				break;
+			}
+		}
+
+	}
+
+	@FindBy(xpath = "//span[contains(text(),'Register')]")
+	WebElement clickRegisterButton;
+
+	@FindBy(xpath = "//div[contains(text(),'Thanks for registering with us - please check your mail.')]")
+	WebElement successMessage;
+
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	public void verifyRegisterButton() {
+		RegisterButton.click();
+	}
+
+	public void getPageSourceofPV() {
+		driver.getPageSource();
+	}
+
+	public void verify_SuccessfulRegistration(String f_name, String L_name, String n_name, String email, String pwd,
+			String repwd) throws Exception {
+		FirstName.sendKeys(f_name);
+		LastName.sendKeys(L_name);
+		NickName.sendKeys(n_name);
+		Email.sendKeys(email);
+		password.sendKeys(pwd);
+		retypepassword.sendKeys(repwd);
+		Thread.sleep(2000);
+		Genderdropdown();
+		DateofBirth.click();
+		Thread.sleep(2000);
+		dateSet();
+		Thread.sleep(2000);
+		DoB();
+		clickRegisterButton.click();
+
+	}
+
+	public void verifyAllPageValidations() {
+
+		String ValidationText = driver
+				.findElement(
+						By.xpath(".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[3]/div"))
+				.getText();
+
+		if (ValidationText.contains("The nickname")) {
+			System.out.println("Validation verified: Nick name already in Use: Enter new nickname");
+		} else if (ValidationText.contains("The email")) {
+			System.out.println("Validation verified: Email already in Use: Enter new email");
+		} else if (ValidationText.contains("Thanks for registering with us")) {
+			System.out.println("Thanks for registering with us - please check your mail.");
+		} else if (ValidationText.contains("First name")) {
+			System.out.println("First name, accept only letters and white space allowed..");
+		} else if (ValidationText.contains("First Name length should be min 2 and max 30")) {
+			System.out.println("First Name length should be min 2 and max 30 character.");
+		} else if (ValidationText.contains("Last name")) {
+			System.out.println("Last Name length should be min 2 and max 30 character.");
+		} else if (ValidationText.contains("Last name")) {
+			System.out.println("Last Name length should be min 2 and max 30 character.");
+		} else if (ValidationText.contains("Password length")) {
+			System.out.println("Password length should be min 5 and max 30 character.");
+		} else if (ValidationText.contains("Please specify correct")) {
+			System.out.println("Please specify correct date of birth.");
+		} else if (ValidationText.contains("The email is not valid")) {
+			System.out.println("Please ");
+		}
+
+		else {
+			System.out.println("User registraiton verified");
+		}
+
+	}
+
+	// To check the last name validation
+	public void ValidatioinforLastName() {
+		String ValidationText = driver
+				.findElement(
+						By.xpath(".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[3]/div"))
+				.getText();
+
+		if (ValidationText.contains("Last name")) {
+			System.out.println("Last Name length should be min 2 and max 30 character.");
+
+		} else {
+			System.out.println("Invalid Validation: Please check...!!!: Test Failed");
+		}
+
+	}
+
+	// To check the Nickname Char Lenth validation.....
+
+	public void NickNameCharLenth() {
+
+		String ValidationText = driver
+				.findElement(
+						By.xpath(".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[3]/div"))
+				.getText();
+		if (ValidationText.contains("Nickname")) {
+			System.out.println("Nickname length should be min 3 and max 20 character.");
+		} else
+			System.out.println("Invalid Validation: Please check...!!!: Test Failed");
+	}
+
+	public void DuplicateNickname() {
+
+		String ValidationText = driver
+				.findElement(
+						By.xpath(".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[3]/div"))
+				.getText();
+		if (ValidationText.contains("The nickname")) {
+			System.out.println("The Nickname already in use..");
+		} else
+			System.out.println("Invalid Validation: Please check...!!!: Test Failed");
+	}
+
+	// Logging functionality
+
+	@FindBy(linkText = "Login")
+	@CacheLookup
+	WebElement LoginButton;
+
+	@FindBy(name = "username")
+	@CacheLookup
+	WebElement EnterUsername;
+
+	@FindBy(id = "password")
+	@CacheLookup
+	WebElement EnterPassword;
+
+	@FindBy(xpath = "//div[@class='modal-body']/div[4]/div/button")
+	@CacheLookup
+	WebElement Submit_Login;
+
+	public void LoginAccount(String uName, String uPwd) {
+
+		LoginButton.click();
+		EnterUsername.sendKeys(uName);
+		EnterPassword.sendKeys(uPwd);
+		Submit_Login.click();
+	}
+
+	public void tearDown() {
+		driver.quit();
+	}
+
+	// Home Page Elements Verification//
+
+	// Verify if clicking on register button redirects to registrtion page
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	@CacheLookup
+	WebElement verifyRegisterImage;
+
+	public void verifyReg() {
+
+		boolean reg_Image = verifyRegisterImage.isDisplayed();
+		System.out.println(reg_Image);
+		verifyRegisterImage.click();
+
+	}
+
+	//// Verify if clicking on technology button redirects to technology page
+	@FindBy(css = "img[src='cdn/images/products.png']")
+	@CacheLookup
+	WebElement ProductImage;
+
+	public void ProductButton() {
+
+		boolean pro_Image = ProductImage.isDisplayed();
+		System.out.println(pro_Image);
+		ProductImage.click();
+
+	}
+
+	// Acadmy button verification
+
+	@FindBy(css = "img[src='cdn/images/academy-green.png']")
+	@CacheLookup
+	WebElement AcademyImage;
+
+	public void AcademyButton() {
+
+		boolean acd_Image = AcademyImage.isDisplayed();
+		System.out.println(acd_Image);
+		AcademyImage.click();
+	}
+
+	// Cricket Jobs button verification
+
+	@FindBy(css = "img[src='cdn/images/pv-jobs.png']")
+	@CacheLookup
+	WebElement CricketJobsImage;
+
+	public void CricketJobsButtonVerify() {
+
+		boolean Jobs_Image = CricketJobsImage.isDisplayed();
+		System.out.println(Jobs_Image);
+		CricketJobsImage.click();
+	}
+
+	// Get it on Google Play button verifcation
+
+	@FindBy(css = "img[src='cdn/images/android.png']")
+	@CacheLookup
+	WebElement AndroidImage;
+
+	public void GetitFromGoogle() {
+
+		boolean and_Image = AndroidImage.isDisplayed();
+		System.out.println(and_Image);
+		AndroidImage.click();
+	}
+
+	// Get it on Apple i store button verification
+
+	@FindBy(css = "img[src='cdn/images/iphone.png']")
+	@CacheLookup
+	WebElement IstoreImage;
+
+	public void GetitFromApple() {
+
+		boolean IOS_Image = IstoreImage.isDisplayed();
+		System.out.println(IOS_Image);
+		IstoreImage.click();
+	}
+
+	// Handling new window in selenium webdriver
+
+	public void HanddleWindow() throws Exception {
+		ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs2.get(1));
+		// driver.switchTo().window(tabs2.get(0));
+		Thread.sleep(3000);
+	}
+
+	// Verifying tool tip share/like/views and commetns..
+
+	@FindBy(xpath = ".//*[@id='tab-linearrow-newsfeed']/div/div/ul/li[1]/newsfeed-panel/div/div/div[2]/div[2]/div[3]/div/div[1]/a[1]")
+	@CacheLookup
+	WebElement toolTips;
+
+	public void VerifyToolTips() {
+		toolTips.click();
+	}
+
+}

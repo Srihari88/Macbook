@@ -1,0 +1,30 @@
+
+public class OverloadingIs {
+
+	void m1(int a) {
+		System.out.println("Single argument constructor");
+
+	}
+
+	void m1(char c) {
+
+		System.out.println("Double argument constructor");
+	}
+
+	void m1(int a, int b, String s) {
+
+		System.out.println("Multiple argument constructor");
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		OverloadingIs ols = new OverloadingIs();
+		ols.m1(10);
+		ols.m1(40, 'C');
+		ols.m1(89, 44, "Sri");
+
+	}
+
+}

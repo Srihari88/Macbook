@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Switch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner s = new Scanner(System.in);
+
+		System.out.println(" Enter the age...");
+
+		int Age = s.nextInt();
+
+		switch (Age) {
+
+		case 18:
+			System.out.println(" Age 18");
+
+		case 19:
+
+			System.out.println(" Age 19");
+
+		default:
+
+			System.out.println(" Not matched");
+
+		}
+	}
+
+}

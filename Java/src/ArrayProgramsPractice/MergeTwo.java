@@ -1,0 +1,25 @@
+package ArrayProgramsPractice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class MergeTwo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String[] a = { "R", "T", "E", "Y" };
+		String[] b = { "I", "O", "R", "P" };
+
+		List<String> al = new ArrayList<String>(Arrays.asList(a));
+
+		al.addAll(Arrays.asList(b));
+
+		Object[] c = al.toArray();
+
+		System.out.println(Arrays.toString(c));
+
+	}
+
+}

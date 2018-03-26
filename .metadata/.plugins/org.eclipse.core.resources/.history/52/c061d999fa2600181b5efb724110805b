@@ -1,0 +1,26 @@
+package com.PageObjectModel.FrameWork.uiActions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+
+	WebDriver driver;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement RegisterButton;
+	
+	
+	
+
+	public HomePage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void verifyRegisterButton(){
+		RegisterButton.click();
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+@Listeners(com.project.TestNGListner.class)
+public class ListTest {
+
+	WebDriver driver;
+
+	@Test
+	public void verifyGoogleTitle() {
+		WebDriver driver = new FirefoxDriver();
+
+		driver.get("https://google.com");
+		System.out.println(driver.getTitle());
+	}
+
+	@Test
+
+	public void verifyURL() {
+		driver.getCurrentUrl();
+
+		System.out.println(driver.getCurrentUrl());
+	}
+
+}

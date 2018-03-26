@@ -1,0 +1,18 @@
+package HashSetExample;
+
+import java.util.HashSet;
+
+public class ConverationtoHassetToArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashSet h = new HashSet();
+
+		h.add("Sri");
+		h.add("hari");
+		h.add("Naidu");
+		h.add("Pudu");
+	}
+
+}

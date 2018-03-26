@@ -1,0 +1,23 @@
+
+public class Switch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		byte a = 45;
+
+		switch (a) {
+
+		case 45:
+			System.out.println("Case 1 executed");
+
+		case 55:
+			System.out.println("Case 2 executed");
+
+		case 35:
+			System.out.println("Case 3 executed");
+
+		}
+	}
+
+}

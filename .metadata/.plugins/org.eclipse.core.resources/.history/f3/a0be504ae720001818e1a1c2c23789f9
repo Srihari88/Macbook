@@ -1,0 +1,16 @@
+
+public class Overridding {
+
+	void marry() {
+		System.out.println("black girl");
+	}
+
+}
+
+class Overridding1 extends Overridding {
+
+	void marry() {
+		System.out.println("Red girl");
+	}
+
+}

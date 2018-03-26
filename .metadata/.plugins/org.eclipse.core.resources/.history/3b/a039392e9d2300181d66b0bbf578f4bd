@@ -1,0 +1,16 @@
+
+// Write a program to print 1 to 100 numbers in java
+public class Tough {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int limit = 100;
+
+		for (int i = 1; i <= 100; i++) {
+
+		}
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package HashSetExample;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class LoopI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashSet h = new HashSet();
+
+		h.add(10);
+		h.add("Sri");
+		h.add("A");
+		h.add("Z");
+		h.add("S");
+		h.add(null);
+		System.out.println(h);
+
+		Iterator itr = h.iterator();
+
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+
+	}
+
+}

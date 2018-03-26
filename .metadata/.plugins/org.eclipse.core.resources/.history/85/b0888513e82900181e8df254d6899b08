@@ -1,0 +1,13 @@
+package Arrays;
+
+public class SumOfArrays {
+
+	int[] a = { 23, 23, 24, };
+	
+	int sum=0;
+	
+	for(int aa: a){
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.PageObjectModel.FrameWork.uiActions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+
+	WebDriver driver;
+
+	HomePage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+}

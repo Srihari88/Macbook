@@ -1,0 +1,87 @@
+package com.PageObjectModel.FrameWork.HomePage;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.PageObjectModel.FrameWork.testBase.testBase;
+import com.PageObjectModel.FrameWork.uiActions.HomePage;
+
+public class TC_2VerifyAllRegistrationFields extends testBase {
+
+	HomePage homepage;
+
+	@BeforeTest
+	public void OpenBrowser() {
+		init();
+	}
+
+	@Test
+	public void VerifyRegistrationFields() throws Exception {
+		homepage = new HomePage(driver);
+		homepage.verifyRegisterButton();
+		Thread.sleep(4000);
+		String page = driver.getPageSource();
+
+		if (page.contains("First name")) {
+			System.out.println("First name field present");
+		} else {
+			System.out.println("First name field not present");
+		}
+
+		if (page.contains("Last name")) {
+			System.out.println("Last name field present");
+		} else {
+			System.out.println("Last name field not present");
+		}
+
+		if (page.contains("Nickname")) {
+			System.out.println("Nickname field present");
+		} else {
+			System.out.println("Nickname field not present");
+		}
+
+		if (page.contains("Email")) {
+			System.out.println("Email field present");
+		} else {
+			System.out.println("Email field not present");
+
+		}
+
+		if (page.contains("Are you an organisation?")) {
+			System.out.println("Are you an organisation present");
+		} else {
+			System.out.println("Are you an organisation field not present");
+		}
+
+		if (page.contains("Password")) {
+			System.out.println("Password field present");
+		} else {
+			System.out.println("Password field not present");
+		}
+
+		if (page.contains("Retype Password")) {
+			System.out.println(" Retype Password field present");
+		} else {
+			System.out.println("Retype Password field not present");
+		}
+
+		if (page.contains("Gender")) {
+			System.out.println(" Gender field present");
+		} else {
+			System.out.println("Gender field not present");
+		}
+
+		if (page.contains("yyyy-mm-dd")) {
+			System.out.println(" Date field present");
+		} else {
+			System.out.println("Date field not present");
+		}
+	}
+
+	@AfterTest
+	public void terminateBrowser() {
+		driver.close();
+	}
+
+}

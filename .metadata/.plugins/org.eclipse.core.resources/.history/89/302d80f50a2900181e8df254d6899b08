@@ -1,0 +1,69 @@
+package com.Srihari.MavenFrameWork.testBase;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class testBase {
+
+	public static WebDriver driver;
+	public static String Url = "http://www.pitchvision.com/#/";
+	public static String browser = "Firefox";
+
+	public void init() {
+		selectBrowser(browser);
+		getURL(Url);
+
+	}
+
+	public static void selectBrowser(String browser) {
+		if (browser.equals(browser)) {
+
+			// System.setProperty("webdriver.chrome.driver",
+			// "/Users/reenupanwar/Desktop/Selenium Software/chromedriver 4");
+			// driver = new ChromeDriver();
+			driver = new FirefoxDriver();
+
+		} else if (browser.equals(browser)) {
+
+			driver = new FirefoxDriver();
+
+		}
+	}
+
+	public static void getURL(String Url) {
+
+		driver.get(Url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	}	
+
+	public void getScreenShot() {
+
+		Calendar calender = Calendar.getInstance();
+		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		try {
+			File destFile = new File(
+					"/Users/reenupanwar/Documents/SeleniumPrograms/com.Srihari.MavenFrameWork/src/main/java/Screenshots "
+							+ formater.format(calender.getTime()) + ".png");
+
+			FileUtils.copyFile(srcFile, destFile);
+			System.out.println(" Captured the screenshot..!!");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+	}
+
+}

@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="/Users/reenupanwar/Desktop/Softwares/Jars/junit-4.11.jar"/>
 	<classpathentry kind="lib" path="/Users/reenupanwar/Desktop/Softwares/Jars/mockito-all-2.0.2-beta.jar"/>
 	<classpathentry kind="lib" path="/Users/reenupanwar/Desktop/Softwares/Selenium Jar/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

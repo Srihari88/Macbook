@@ -1,0 +1,25 @@
+
+public class HariNaidu {
+
+	int a = 100;
+	static int b = 200;
+	static String s = "Srihari";
+
+	public static void m1() {
+		System.out.println(b);
+	}
+
+	void m2() {
+		System.out.println(a);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HariNaidu hn = new HariNaidu();
+		m1();
+		hn.m2();
+
+	}
+
+}

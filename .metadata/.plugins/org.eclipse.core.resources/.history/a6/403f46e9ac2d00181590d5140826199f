@@ -1,0 +1,10 @@
+package ArrayListExcercise;
+
+public class AddArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+
+public class ForLoop {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] x = { 20, 34, 55, 44 };
+
+		for (int i =x.length ; i <=0; i--) {
+
+			System.out.println(x[i]);
+
+		}
+		// for (int[] x1 : x) {
+		// for(int x2:x1){
+		// System.out.println(x2);
+		// }
+		// }
+	}
+
+}

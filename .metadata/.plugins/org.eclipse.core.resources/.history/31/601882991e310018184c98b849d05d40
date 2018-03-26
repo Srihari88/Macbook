@@ -1,0 +1,26 @@
+package com.PageObjectModel.FrameWork.testBase;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+public class Config {
+
+	Properties prop;
+
+	public Config() {
+
+		FileInputStream fis;
+		try {
+			fis = new FileInputStream(
+					"/Users/reenupanwar/Documents/SeleniumPrograms/com.PageObjectModel.FrameWork/Data/config.properties");
+			prop = new Properties();
+			prop.load(fis);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.printStackTrace());
+		}
+
+	}
+
+}

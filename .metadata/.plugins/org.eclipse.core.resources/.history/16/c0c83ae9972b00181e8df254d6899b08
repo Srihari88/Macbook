@@ -1,0 +1,26 @@
+package Arrays;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Searching {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList al = new ArrayList();
+
+		al.add("Sr");
+		al.add("Hari");
+		al.add("Naidu");
+		al.add("Pudu");
+
+		System.out.println("Before sorting the Arraylist" + al);
+		Collections.sort(al);
+		System.out.println("Before sorting the Arraylist" + al);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,61 @@
+package BasicSelenium;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class VerificationText {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.flipkart.com/");
+
+		Actions action = new Actions(driver);
+
+		driver.findElement(By.xpath("html/body/div[2]/div/div/button")).click();
+
+		ArrayList actualText = new ArrayList();
+
+		actualText.add("Electronics");
+		actualText.add("TVs & Appliances");
+		actualText.add("Men");
+		actualText.add("Women");
+		actualText.add("Baby & Kids");
+		actualText.add("Home & Furniture");
+		actualText.add("Sports, Books & More");
+		actualText.add("Offer Zone");
+
+		System.out.println(actualText);
+
+		// action.moveToElement(driver.findElement(
+		// By.xpath(".//*[@id='container']/div/header/div[3]/div/ul/li[2]/ul/li/ul/li[4]/ul/li[10]/a/span")))
+		// .build().perform();
+		// Thread.sleep(4000);
+		//
+		// System.out.println("Reach");
+
+		List<WebElement> totalText = driver
+				.findElements(By.xpath(".//*[@id='container']/div/header/div[3]/div/ul/li/a"));
+
+		ArrayList expectedText = new ArrayList();
+
+		Iterator<WebElement> itr = totalText.iterator();
+		while (itr.hasNext()) {
+
+			expectedText.add(itr.next().getText());
+
+		}
+
+		Assert.assertEquals(expectedText, actualText);
+	}
+
+}

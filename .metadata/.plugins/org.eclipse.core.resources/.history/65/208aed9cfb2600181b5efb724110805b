@@ -1,0 +1,50 @@
+package com.PageObjectModel.FrameWork.uiActions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+
+	WebDriver driver;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement RegisterButton;
+
+	@FindBy(css = "input[name='first_name']")
+	WebElement FirstName;
+
+	@FindBy(css = "input[name='last_name']']")
+	WebElement LastName;
+
+	@FindBy(css = "input[name='nickname']']")
+	WebElement NickName;
+
+	@FindBy(css = "input[name='email']']")
+	WebElement Email;
+
+	@FindBy(css = "input[name='orgName']")
+	WebElement Organization;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement password;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement retypepassword;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement Gender;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement DateofBirth;
+
+	public HomePage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+	public void verifyRegisterButton() {
+		RegisterButton.click();
+	}
+
+}

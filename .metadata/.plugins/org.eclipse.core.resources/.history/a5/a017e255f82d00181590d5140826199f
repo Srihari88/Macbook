@@ -1,0 +1,47 @@
+package HashMap;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashMap hp = new HashMap();
+
+		hp.put(111, "SriHari");
+		hp.put(222, "Naidu");
+		hp.put(333, "Pudu");
+
+		System.out.println(hp.toString());
+
+		Set s = hp.entrySet();
+
+		Iterator itr = s.iterator();
+
+		System.out.println(hp.size());
+
+		System.out.println(hp.clone());
+
+		System.out.println(hp.isEmpty());
+
+		System.out.println("The Key value set...!!!" + hp.keySet());
+		System.out.println("The Key value set...!!!" + hp.values());
+
+		System.out.println(hp.size());
+		while (itr.hasNext()) {
+			Map.Entry mm = (Map.Entry) itr.next();
+
+			System.out.println("The Key is " + mm.getKey() + " The Value is " + mm.getValue());
+		}
+
+		Object ss = hp.remove(222);
+
+		System.out.println(ss);
+
+	}
+
+}

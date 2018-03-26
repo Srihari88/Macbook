@@ -1,0 +1,28 @@
+package com.PageObjectModel.FrameWork.Login;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.PageObjectModel.FrameWork.testBase.testBase;
+import com.PageObjectModel.FrameWork.uiActions.HomePage;
+
+public class TC_01VerifyLogin extends testBase {
+
+	HomePage homepage;
+
+	@BeforeTest
+	public void OpenBrowser() {
+		init();
+	}
+
+	
+	public void VerifyRegistrationFields() throws Exception {
+		homepage = new HomePage(driver);
+		homepage.LoginAccount();
+
+	}
+	
+	
+
+}

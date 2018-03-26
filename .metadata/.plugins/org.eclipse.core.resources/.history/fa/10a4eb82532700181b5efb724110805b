@@ -1,0 +1,42 @@
+package com.PageObjectModel.FrameWork.HomePage;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.PageObjectModel.FrameWork.testBase.testBase;
+import com.PageObjectModel.FrameWork.uiActions.HomePage;
+
+public class TC_2VerifyAllRegistrationFields extends testBase {
+
+	HomePage homepage;
+
+	@BeforeTest
+	public void OpenBrowser() {
+		init();
+	}
+
+	@Test
+	public void VerifyRegistrationFields() throws Exception {
+		homepage = new HomePage(driver);
+		homepage.verifyRegisterButton();
+		Thread.sleep(4000);
+		String page = driver.getPageSource();
+
+		if (page.contains("First name")) {
+			System.out.println(" First name field present");
+		} else if(page.contains("Last name")){
+			System.out.println(" Last name field not present");
+		}else if(page.contains("Nickname")){
+			System.out.println("Nick name field not present");
+			else if(page.contains("Nickname")){
+				System.out.println("Nick name field not present");
+
+	}
+
+	@AfterTest
+	public void terminateBrowser() {
+		driver.close();
+	}
+
+}

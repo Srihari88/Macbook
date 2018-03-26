@@ -1,0 +1,16 @@
+package com.PageObjectModel.FrameWork.testBase;
+
+public class testBase {
+
+	public WebDriver driver;
+
+	public void setBrowser(String browser) {
+
+		if (browser.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("chorme")) {
+			driver = new ChromeDriver();
+		}
+	}
+
+}

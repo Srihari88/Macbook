@@ -1,0 +1,32 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class VerifyHomePage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.demo.guru99.com/V4/");
+
+		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys("mngr121789");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("vugEryg");
+
+		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+
+		String exp_HompePage = driver.getTitle();
+
+		// Verify home page
+
+		String act_HomePage = "Guru99 Bank";
+
+		if (exp_HompePage.equals(act_HomePage)) {
+			System.out.println("Test case passsed");
+		} else {
+			System.out.println(" Test Failed");
+		}
+
+	}
+
+}

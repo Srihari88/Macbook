@@ -1,0 +1,14 @@
+package com.Strings;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		String s1 = "Srihari";
+
+		String s2 = s1.concat("Naidu");
+
+		System.out.println(s2);
+	}
+
+}

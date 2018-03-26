@@ -1,0 +1,21 @@
+package ArrayListExcercise;
+
+import java.util.ArrayList;
+
+public class AddArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList al = new ArrayList();
+
+		al.add("SriHair");
+		al.add("Naidu");
+		al.add("Pudu");
+		al.add("Tutroil");
+
+		System.out.println(al);
+
+	}
+
+}

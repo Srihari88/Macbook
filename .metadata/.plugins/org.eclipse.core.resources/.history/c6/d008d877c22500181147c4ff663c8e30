@@ -1,0 +1,56 @@
+/* @author Srihari Naidu
+*        Test Script 02
+*        ************** 
+*        Test Steps
+*        1)  Go to http://www.demo.guru99.com/V4/
+         2) Enter valid UserId
+         3) Enter valid Password
+         4) Click Login
+         5) Verify the output
+*/
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class VerifyHomePage {
+
+	public static WebDriver driver;
+
+	@BeforeMethod(description = "Launch the browser")
+	public void lunchBrowser() {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.demo.guru99.com/V4/");
+		driver.manage().window().maximize();
+
+	}
+
+	@Test(description = "Login check to enter the valid Username & Password")
+
+	public void Login() {
+		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys("mngr121789");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("vugEryg");
+
+		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+
+		String exp_HompePage = driver.getTitle();
+
+		System.out.println(driver.getTitle());
+
+		Thread.sleep(4000);
+		
+		String act_HomePage = "Guru99 Bank Manager HomePage";
+
+		if(exp_HompePage.equals(act_HomePage))
+		{
+			System.out.println("Test case passed");
+		}else
+		{
+			System.out.println(" Test Failed");
+		}
+		}
+
+
+}

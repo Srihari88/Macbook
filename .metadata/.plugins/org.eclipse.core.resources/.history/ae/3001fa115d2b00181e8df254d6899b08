@@ -1,0 +1,35 @@
+package Arrays;
+
+import java.util.ArrayList;
+
+public class Student {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<String> al = new ArrayList<String>();
+
+		al.add("Srihari");
+		al.add("Naidu");
+		al.add("Pudu");
+
+		System.out.println("The List of all objects in the arraylist is" + al);
+
+		al.add(3, "Simhachalam");
+		al.add(4, "Naidu");
+		System.out.println("The List of all objects in the arraylist is" + al);
+
+		al.add(0, "hello");
+		System.out.println("The List of all objects in the arraylist is" + al);
+
+		al.remove(0);
+
+		System.out.println("The List of all objects in the arraylist is" + al);
+
+		int ind = al.indexOf("Pudu");
+
+		System.out.println("The List of all objects in the arraylist is" + al + " and" + ind);
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.PageObjectModel.FrameWork.uiActions;
+
+public class HomePage {
+
+}

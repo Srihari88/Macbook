@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+    
+    	<listeners>
+		<listener class-name="ExtentReportGeneration.ExtentReporterNG"></listener>
+	</listeners>
+
+	<test name="VerifyLogin">
+		<classes>
+			<class name="com.PageObjectModel.FrameWork.Login.TC_01VerifyLogin" />
+			<class name="com.PageObjectModel.FrameWork.Login.TC_02RegisterButtonVerification" />
+			<class name="com.PageObjectModel.FrameWork.Login.TC_03TechnologyButtonVerification" />
+			<class name="com.PageObjectModel.FrameWork.Login.TC_04AcademyButtonVerification" />
+			<class name="com.PageObjectModel.FrameWork.Login.TC_05CricketJobs" />
+			<class name="com.PageObjectModel.FrameWork.Login.TC_06GetItOnGooglePlay" />
+			<class name="com.PageObjectModel.FrameWork.Login.TC_07GetonAppStore" />
+			<class name="com.PageObjectModel.FrameWork.Login.TC_08VerifyToolTips" />
+			
+		</classes>
+	</test>
+
+
+</suite> <!-- Suite -->

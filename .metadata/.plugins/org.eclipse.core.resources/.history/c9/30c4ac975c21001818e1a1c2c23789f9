@@ -1,0 +1,23 @@
+
+public class OverloadingIs {
+
+	void m1(int a) {
+
+	}
+
+	void m1(int a, int b) {
+
+	}
+
+	void m1(int a, int b, String s) {
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		OverloadingIs ols = new OverloadingIs();
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package SortingTechinques;
+
+import java.util.ArrayList;
+
+public class Student {
+
+	int sid;
+	String sname;
+
+//	public Student(int sid, String sname) {
+//		this.sid = sid;
+//		this.sname = sname;
+//	}
+
+	public Student(int i, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<String> al = new ArrayList<String>();
+		al.add(new Student(111,"SriHari"));
+
+	}
+
+}

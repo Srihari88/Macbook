@@ -1,0 +1,45 @@
+package com.PageObjectModel.FrameWork.testBase;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Config {
+	WebDriver driver;
+	Properties prop;
+
+	Config con = new Config();
+
+	public Config() {
+
+		FileInputStream fis;
+		try {
+			fis = new FileInputStream(
+					"/Users/reenupanwar/Documents/SeleniumPrograms/com.PageObjectModel.FrameWork/Data/config.properties");
+			prop = new Properties();
+			prop.load(fis);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.print(e.getMessage());
+		}
+	}
+
+	public String getURL() {
+		String currentURL = prop.getProperty("Url");
+		return currentURL;
+	}
+
+	public String getBrowser() {
+		String chromePath = prop.getProperty("ChromeBrowser");
+		return chromePath;
+	}
+
+	public void getChromeBrowser() {
+		System.setProperty("webdriver.chrome.driver", con.getBrowser());
+		driver = new ChromeDriver();
+	}
+
+}

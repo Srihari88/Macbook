@@ -1,0 +1,45 @@
+package com.PageObjectModel.FrameWork.HomePage;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.PageObjectModel.FrameWork.testBase.testBase;
+import com.PageObjectModel.FrameWork.uiActions.HomePage;
+
+public class TC_3SuccessfulRegistration extends testBase {
+
+	HomePage homepage;
+
+	@BeforeTest
+	public void OpenBrowser() {
+		init();
+	}
+
+	@Test
+	public void UserSuccessfulRegistration() throws Exception {
+		homepage = new HomePage(driver);
+		homepage.verifyRegisterButton();
+		homepage.verify_SuccessfulRegistration("Iojo", "Aklded", "jcodZ", "srihari.naidu+kzo@misport.com", "macbook",
+				"macbook");
+		homepage.verifyAllPageValidations();
+		Thread.sleep(5000);
+
+	}
+
+	
+	@Test
+	public void AllPageValidations() throws Exception {
+		homepage = new HomePage(driver);
+		homepage.verifyRegisterButton();
+		homepage.verifyAllPageValidations();
+		Thread.sleep(5000);
+
+	}
+
+	@AfterTest
+	public void terminateBrowser() {
+		//driver.close();
+	}
+
+}

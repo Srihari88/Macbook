@@ -1,0 +1,29 @@
+class A{
+	
+}
+
+class B{
+	
+}
+
+
+class C{
+	
+}
+
+class D{
+	
+}
+
+
+
+
+
+public class Inhertence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

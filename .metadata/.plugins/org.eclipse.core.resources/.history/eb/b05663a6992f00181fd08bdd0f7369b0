@@ -1,0 +1,21 @@
+package HashMap;
+
+import java.util.HashMap;
+
+public class Loops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashMap<Integer, String> hashmap = new HashMap<Integer, String>();
+
+		hashmap.put(111, "CHIRU");
+		hashmap.put(111, "RAM CHARAN");
+		hashmap.put(111, "PAWAN KALYAN");
+		hashmap.put(111, " ALLU ARJUN");
+
+		System.out.println(hashmap);
+
+	}
+
+}

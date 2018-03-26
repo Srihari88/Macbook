@@ -1,0 +1,25 @@
+package ArrayProgramsPractice;
+
+public class ArrayObjectsWork extends Emp{
+
+	ArrayObjectsWork(int eid, String ename) {
+		super(eid, ename);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Emp[] e = new Emp[3];
+
+		Emp e1 = new Emp(111, "Srihari");
+		Emp e2 = new Emp(111, "Naidu");
+		Emp e3 = new Emp(111, "Pudu");
+
+		for (Emp ee : e) {
+			System.out.println(ee.eid + "========" + ee.ename);
+		}
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package TreeSet;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapE {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashMap h = new HashMap();
+
+		h.put(111, "SRI");
+		h.put(222, "HARI");
+		h.put(333, "Naidu");
+
+		System.out.println(h);
+
+		System.out.println(h.keySet());
+		System.out.println(h.values());
+
+		Set ss = h.entrySet();
+
+		Iterator itr = ss.iterator();
+		while (itr.hasNext()) {
+			Map.Entry m = (Map.Entry) itr.next();
+
+			System.out.println(m.getKey() + "====" + m.getValue());
+		}
+
+	}
+
+}

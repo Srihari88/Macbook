@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Switch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a = 20;
+
+		switch (a) {
+
+		case 10*20:
+			System.out.println("My Name is Srihari");
+			break;
+
+		case 30/2:
+
+			System.out.println(" My name is Siddhi");
+			break;
+		default:
+
+			System.out.println(" Not matched");
+			break;
+		}
+	}
+
+}

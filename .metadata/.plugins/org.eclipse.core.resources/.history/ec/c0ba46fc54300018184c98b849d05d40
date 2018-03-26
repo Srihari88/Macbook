@@ -1,0 +1,51 @@
+package com.PageObjectModel.FrameWork.Login;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.PageObjectModel.FrameWork.testBase.testBase;
+import com.PageObjectModel.FrameWork.uiActions.HomePage;
+
+public class TC_08VerifyToolTips extends testBase {
+
+	HomePage homepage;
+
+	@BeforeMethod
+	public void OpenBrowser() {
+		init();
+	}
+
+	@Test(priority = 1, description = "Verify the share tool tip")
+	public void GetToolTips() throws Exception {
+
+		homepage = new HomePage(driver);
+		homepage.VerifyToolTips();
+	}
+
+	@Test(priority = 2, description = "Verify the like tip")
+	public void likeTool() {
+		homepage = new HomePage(driver);
+		homepage.VerifyLikeTip();
+	}
+
+	@Test(priority = 3, description = "Verify the view tool tip")
+	public void ViewTool() {
+		homepage = new HomePage(driver);
+		homepage.VerifyViewTip();
+	}
+
+	@Test(priority = 4, description = "Verify the Comment tool tip")
+	public void CommentTool() {
+		homepage = new HomePage(driver);
+		homepage.CommentViewTip();
+	}
+
+	@AfterMethod
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+}

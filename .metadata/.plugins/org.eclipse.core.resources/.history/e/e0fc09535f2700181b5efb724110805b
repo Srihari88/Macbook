@@ -1,0 +1,109 @@
+package com.PageObjectModel.FrameWork.uiActions;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class HomePage {
+
+	WebDriver driver;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement RegisterButton;
+
+	@FindBy(css = "input[name='first_name']")
+	WebElement FirstName;
+
+	@FindBy(css = "input[name='last_name']")
+	WebElement LastName;
+
+	@FindBy(css = "input[name='nickname']")
+	WebElement NickName;
+
+	@FindBy(css = "input[name='email']")
+	WebElement Email;
+
+	@FindBy(css = ".reg-switch")
+	WebElement OrgCheck;
+
+	@FindBy(css = "input[name='orgName']")
+	WebElement Organization;
+
+	@FindBy(css = "input[name='password']")
+	WebElement password;
+
+	@FindBy(css = "input[name='repassword']")
+	WebElement retypepassword;
+
+	@FindBy(css = "select[name='gender']")
+	WebElement Gender;
+
+	public void dropdown() {
+		Select gender = new Select(driver.findElement(By.id("gender")));
+		gender.selectByVisibleText("Male");
+
+	}
+
+	@FindBy(css = "input[placeholder='yyyy-mm-dd']")
+	WebElement DateofBirth;
+
+	public void dateSet() {
+		int i;
+		for (i = 1; i <= 50; i++) {
+			driver.findElement(By
+					.xpath(".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/ul/li[1]/div/table/thead/tr[1]/th[1]"))
+					.click();
+
+		}
+	}
+
+	public void DoB() {
+		List<WebElement> dates = driver.findElements(By.xpath(
+				".//*[@id='content']/div/div/div/pv-registration/div/div/div[2]/div/form/div[1]/div[5]/div[2]/div/div[2]/ul/li[1]/div/table/tbody/tr/td"));
+		int total_node = dates.size();
+		for (int i = 0; i < total_node; i++) {
+			String date = dates.get(i).getText();
+			if (date.equals("15")) {
+				dates.get(i).click();
+				break;
+			}
+		}
+
+	}
+
+	public HomePage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+	public void verifyRegisterButton() {
+		RegisterButton.click();
+	}
+
+	public void getPageSourceofPV() {
+		driver.getPageSource();
+	}
+
+	public void verify_SuccessfulRegistration(String f_name, String L_name, String n_name, String email, String org,
+			String pwd, String repwd) {
+		FirstName.sendKeys(f_name);
+		LastName.sendKeys(L_name);
+		NickName.sendKeys(n_name);
+		Email.sendKeys(email);
+		OrgCheck.click();
+		Organization.sendKeys(org);
+		password.sendKeys(pwd);
+		retypepassword.sendKeys(repwd);
+		dropdown();
+		DateofBirth.click();
+		dateSet();
+		DoB();
+
+	}
+
+}

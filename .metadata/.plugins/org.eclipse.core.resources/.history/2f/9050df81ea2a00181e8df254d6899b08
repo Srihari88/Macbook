@@ -1,0 +1,40 @@
+package Arrays;
+
+import java.util.ArrayList;
+
+public class Employee {
+
+	int eid;
+	String ename;
+
+	public Employee(int eid, String ename) {
+		// TODO Auto-generated constructor stub
+
+		this.eid = eid;
+		this.ename = ename;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Employee e1 = new Employee(111, "Pudu");
+		Employee e2 = new Employee(222, "Sri");
+		Employee e3 = new Employee(333, "Hari");
+		Employee e4 = new Employee(444, "Naidu");
+
+		ArrayList<Employee> al = new ArrayList<Employee>();
+		
+		al.add(e1);
+		al.add(e2);
+		
+		ArrayList<Employee> al2 = new ArrayList<Employee>();
+		
+		al2.addAll(al);
+		
+		System.out.println(al2);
+		
+		
+
+	}
+
+}

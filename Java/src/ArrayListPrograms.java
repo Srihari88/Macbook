@@ -1,0 +1,113 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class ArrayListPrograms {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		 * 1. Different versions 2. Hetrogenious data will able to hold 3.
+		 * Duplicated objects allowd or not? 4. Null insertions 5. Insertions
+		 * oder preserved 6. Methods are sysnchonised or not? 7. Underlying data
+		 * structure 8. Curosrs
+		 * 
+		 * }
+		 */
+
+		ArrayList al = new ArrayList();
+
+		al.add("Sri");
+		al.add("Hari");
+		al.add("Niadu");
+		al.add("Kori");
+		// al.add(10);
+		// al.add('C');
+		// al.add(100.98);
+
+		System.out.println(al);
+
+		int arraylist_S = al.size();
+
+		System.out.println(arraylist_S);
+
+		System.out.println(al.isEmpty());
+
+		System.out.println(al.indexOf(8));
+
+		al.add(4, "Updated");
+		al.set(2, "NaiduGaru");
+
+		System.out.println(al);
+
+		System.out.println(al.contains("Kori"));
+
+		// al.remove(5);
+
+		System.out.println(al.remove("Kori"));
+		// System.out.println(al.get(5));
+
+		System.out.println(al.clone());
+
+		// al.clear();
+
+		System.out.println(al);
+
+		// Iterators in java to print the data.
+
+		System.out.println("*******For- Each Loop********");
+		for (Object ss : al) {
+			System.out.println(ss);
+		}
+
+		// Iterator to retrive the elements.
+		System.out.println("*******Iterator ********");
+		Iterator itr = al.iterator();
+
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+
+		// For Loop...
+		System.out.println("*******For Loop********");
+		for (int i = 0; i < al.size(); i++) {
+			System.out.println(al.get(i));
+		}
+
+		// WHile loop
+		System.out.println("*******While  Loop********");
+		int count = 0;
+		while (al.size() > count) {
+			System.out.println(al.get(count));
+			count++;
+		}
+
+		System.out.println("*******Enumeration********");
+		Enumeration e = Collections.enumeration(al);
+
+		while (e.hasMoreElements()) {
+			System.out.println(e.nextElement());
+		}
+
+		System.out.println("*******List Iterator********");
+
+		ListIterator listItr = al.listIterator();
+
+		while (listItr.hasNext()) {
+			System.out.println(listItr.next());
+		}
+
+		Collections.sort(al);
+
+		System.out.println("*******After Sorting********");
+		ListIterator Litr = al.listIterator();
+		while (Litr.hasNext()) {
+			System.out.println(Litr.next());
+		}
+
+	}
+}

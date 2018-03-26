@@ -1,0 +1,46 @@
+package com.project;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeMethod;
+
+public class Parallel {
+
+	public WebDriver driver;
+
+	Parallel(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	@BeforeMethod
+
+	public void LanchBrowser(String browser) {
+
+		if (browser.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+
+		} else if (browser.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver",
+					"/Users/reenupanwar/Desktop/Selenium Software/chromedriver 4");
+			driver = new ChromeDriver();
+		}
+	}
+
+	@Test
+
+	public void login() {
+		driver.get("http://www.pitchvision.com/");
+
+		driver.findElement(By.xpath(".//*[@id='site-head']/ul[2]/li/a")).click();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Arun.b");
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("tyrodisk");
+		driver.findElement(
+				By.xpath("//button[@class='width-35 pull-right btn btn-sm btn-primary main-reg-log-submit']")).click();
+	}
+
+}

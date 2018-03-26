@@ -1,0 +1,27 @@
+
+
+public class Switch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		byte a = 20;
+
+		switch (a) {
+
+		case 90:
+			System.out.println("Print the value ");
+			break;
+
+		case 60:
+
+			System.out.println(" m");
+			break;
+		default:
+
+			System.out.println(" Not matched");
+			break;
+		}
+	}
+
+}

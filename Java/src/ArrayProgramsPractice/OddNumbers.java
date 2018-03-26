@@ -1,0 +1,24 @@
+package ArrayProgramsPractice;
+
+import java.util.Arrays;
+
+public class OddNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] arys_nums = { 4, 5, 9, 7 };
+
+		System.out.println("" + Arrays.toString(arys_nums));
+
+		int ctr = 0;
+
+		for (int i = 0; i < arys_nums.length; i++) {
+			if (arys_nums[i] % 2 == 0)
+				ctr++;
+		}
+       System.out.println(ctr);
+       System.out.println("");
+	}
+
+}

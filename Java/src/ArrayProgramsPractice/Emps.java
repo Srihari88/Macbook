@@ -1,0 +1,31 @@
+package ArrayProgramsPractice;
+
+public class Emps {
+
+	int eid;
+	String ename;
+
+	Emps(int eid, String ename) {
+		this.eid = eid;
+		this.ename = ename;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Emps e1 = new Emps(111, "Srihari");
+		Emps e2 = new Emps(222, "Naidu");
+		Emps e3 = new Emps(333, "Pudu");
+
+		Emps[] e = new Emps[3];
+
+		e[0] = e1;
+		e[1] = e2;
+		e[2] = e3;
+
+		for (Emps ee : e) {
+			System.out.println(ee.eid + "========" + ee.ename);
+		}
+
+	}
+}

@@ -1,0 +1,34 @@
+package OperatorsInJava;
+
+public class Increment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a = 10;
+		char c = 'c';
+
+		a++;
+		c++;
+		System.out.println(a);
+		System.out.println(c);
+
+		System.out.println(a + c);
+
+		// //System.out.println(10 / 0);
+		// // System.out.println(10 / 0.0);
+		// System.out.println(0 / 0);
+		//// System.out.println(0.0 / 0);
+
+		System.out.println(10 < Float.NaN);
+
+		System.out.println(10 <= Float.NaN);
+		System.out.println(10 > Float.NaN);
+		System.out.println(10 >= Float.NaN);
+		System.out.println(10 == Float.NaN);
+		System.out.println(Float.NaN == Float.NaN);
+		System.out.println(10 != Float.NaN);
+
+	}
+
+}

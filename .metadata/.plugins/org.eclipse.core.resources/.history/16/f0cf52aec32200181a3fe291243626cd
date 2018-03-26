@@ -1,0 +1,18 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SS1 {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.demo.guru99.com/V4/");
+
+		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys("");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("");
+
+		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+
+	}
+}

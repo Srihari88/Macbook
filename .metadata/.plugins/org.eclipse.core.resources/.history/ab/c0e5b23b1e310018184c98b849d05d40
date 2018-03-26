@@ -1,0 +1,16 @@
+package com.PageObjectModel.FrameWork.testBase;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class Config {
+	protected Properties prop = null;
+	protected FileInputStream fis = new FileInputStream(
+			"/Users/reenupanwar/Documents/SeleniumPrograms/com.PageObjectModel.FrameWork/Data/config.properties");
+
+	public Config() throws Exception {
+		prop = new Properties();
+		prop.load(fis);
+	}
+
+}

@@ -1,0 +1,26 @@
+
+// Write a program to print 1 to 100 numbers in java
+public class Tough {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int i = 100;
+
+		for (i = 0; i <= 100; i++) {
+
+			boolean isEven = true;
+
+			for (int j = 2; j < i; j++) {
+
+				if (i % j == 0) {
+					isEven = false;
+					break;
+				}
+				// System.out.println(i);
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package HashMap;
+
+import java.util.HashMap;
+
+public class HashMapExamples {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+
+		hm.put(111, "SriHari");
+		hm.put(222, "Naidu");
+		hm.put(333, "Pudu");
+		hm.put(444, "Kori");
+
+		System.out.println(hm);
+
+	}
+
+}

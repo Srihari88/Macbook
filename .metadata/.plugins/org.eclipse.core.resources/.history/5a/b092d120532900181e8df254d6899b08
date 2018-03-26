@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList L = new ArrayList();
+
+		L.add("Sri");
+		L.add("Hari");
+		L.add("Naidu");
+
+		Iterator itr = L.iterator();
+
+		{
+			String obj = (String) itr.next();
+			System.out.println(L);
+		}
+
+	}
+
+}

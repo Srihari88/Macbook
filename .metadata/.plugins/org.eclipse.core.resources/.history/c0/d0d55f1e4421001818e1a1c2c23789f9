@@ -1,0 +1,20 @@
+
+public class Parents {
+
+	static void marry() {
+		System.out.println("black girl");
+	}
+
+}
+
+class childone extends Parent {
+	void marry() {
+		System.out.println("Red girl");
+	}
+
+	public static void main(String[] args) {
+		Parent p = new Child();
+
+	}
+
+}

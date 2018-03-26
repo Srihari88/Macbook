@@ -1,0 +1,5 @@
+package com.PageObjectModel.FrameWork.testBase;
+
+public class Config {
+
+}

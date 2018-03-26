@@ -1,0 +1,32 @@
+package BasicSelenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class CheckAllLinks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://wwwpitchvision.com/");
+
+		List<WebElement> WebtotalLinks = driver.findElements(By.xpath("//a"));
+
+		System.out.println(WebtotalLinks.size());
+
+		String[] totalTexts = new String[WebtotalLinks.size()];
+
+		int i = 0;
+		for (WebElement e : WebtotalLinks) {
+			totalTexts[i] = e.getText();
+			i++;
+		}
+
+	}
+
+}

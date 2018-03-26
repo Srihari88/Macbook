@@ -1,0 +1,30 @@
+
+public class Teacher {
+
+	String Designation = "Physics";
+	String ColleageName = "BhaskaraDegreeColz";
+	
+
+	public static void main(String[] args) {
+
+		PhysicsTeacher obj = new PhysicsTeacher();
+
+		System.out.println(obj.ColleageName);
+		System.out.println(obj.Designation);
+		System.out.println(obj.teachering);
+
+		obj.does();
+	}
+
+	void does() {
+		System.out.println("Teaching Physics");
+	}
+
+}
+
+class PhysicsTeacher extends Teacher {
+
+	String teachering = "Physics teaching";
+
+
+}

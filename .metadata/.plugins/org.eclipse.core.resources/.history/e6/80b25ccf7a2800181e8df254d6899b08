@@ -1,0 +1,38 @@
+package com.PageObjectModel.FrameWork.testBase;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class testBase {
+
+	public WebDriver driver;
+	String Url = "https://www.pitchvision.com/#/";
+	String browser = "chrome";
+
+	public void init() {
+		setBrowser(browser);
+		getUrl();
+
+	}
+
+	public void setBrowser(String browser) {
+
+		if (browser.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver",
+					"/Users/reenupanwar/Desktop/Selenium Software/chromedriver");
+			driver = new ChromeDriver();
+		}
+	}
+
+	public void getUrl() {
+		driver.get(Url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.Strings;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		String s1 = "Srihari";
+
+		System.out.println(s1.toString());
+
+		StringBuffer sb = new StringBuffer("Satya");
+		sb.append("Vathi");
+
+		System.out.println(sb.toString());
+	}
+
+}

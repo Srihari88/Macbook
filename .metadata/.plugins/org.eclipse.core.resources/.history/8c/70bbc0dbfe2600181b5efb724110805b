@@ -1,0 +1,66 @@
+package com.PageObjectModel.FrameWork.uiActions;
+
+import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+
+	WebDriver driver;
+
+	@FindBy(css = "img[src='cdn/images/blue-register.png']")
+	WebElement RegisterButton;
+
+	@FindBy(css = "input[name='first_name']")
+	WebElement FirstName;
+
+	@FindBy(css = "input[name='last_name']']")
+	WebElement LastName;
+
+	@FindBy(css = "input[name='nickname']']")
+	WebElement NickName;
+
+	@FindBy(css = "input[name='email']']")
+	WebElement Email;
+
+	@FindBy(css = "input[name='orgName']")
+	WebElement Organization;
+
+	@FindBy(css = "input[name='password']")
+	WebElement password;
+
+	@FindBy(css = "input[name='repassword']")
+	WebElement retypepassword;
+
+	@FindBy(css = "select[name='gender']")
+	WebElement Gender;
+
+	@FindBy(css = "input[placeholder='yyyy-mm-dd']")
+	WebElement DateofBirth;
+
+	public HomePage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+
+	public void verifyRegisterButton() {
+		RegisterButton.click();
+	}
+
+	public void verifyRegistrationFields() {
+	    String f_name = FirstName.getText();
+	    
+	    assertEquals(f_name,"First name");
+		String l_name = LastName.getText();
+		String n_name = NickName.getText();
+		String e_mail = Email.getText();
+		String org = Organization.getText();
+		String pwd = password.getText();
+		String re_pwd = retypepassword.getText();
+		String gen = Gender.getText();
+		String dob = DateofBirth.getText();
+	}
+
+}

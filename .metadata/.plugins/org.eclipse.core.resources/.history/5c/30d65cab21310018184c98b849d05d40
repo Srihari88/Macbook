@@ -1,0 +1,29 @@
+package com.PageObjectModel.FrameWork.testBase;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class ReadPropertyFile {
+
+	protected Properties prop = null;
+	protected FileInputStream fis = new FileInputStream(
+			"/Users/reenupanwar/Documents/SeleniumPrograms/com.PageObjectModel.FrameWork/Data/config.properties");
+
+	public ReadPropertyFile() throws Exception {
+		prop = new Properties();
+		prop.load(fis);
+	}
+
+	public String getUrl() {
+		return prop.getProperty("Url");
+	}
+
+	public String getUsername() {
+		return prop.getProperty("username");
+	}
+
+	public String getPassword() {
+		return prop.getProperty("password");
+	}
+
+}

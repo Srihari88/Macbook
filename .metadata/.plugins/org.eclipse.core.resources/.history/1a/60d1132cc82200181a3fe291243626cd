@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Switch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner s = new Scanner(System.in);
+
+		System.out.println(" Enter the age...");
+
+		int Age = s.nextInt();
+
+		if (Age > 18) {
+			System.out.println(" Age moretan 18 years");
+		} else
+			System.out.println(" Age not morethan 18 years");
+	}
+
+}

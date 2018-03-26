@@ -1,0 +1,14 @@
+package com.Strings;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// Construct a Boolean object.
+		Boolean blnObj = new Boolean("trues");
+
+		// use booleanValue of Boolean class to convert it into boolean
+		// primitive
+		boolean b = blnObj.booleanValue();
+		System.out.println(b);
+	}
+}

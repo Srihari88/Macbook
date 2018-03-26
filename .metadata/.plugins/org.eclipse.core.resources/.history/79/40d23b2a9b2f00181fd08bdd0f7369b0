@@ -1,0 +1,22 @@
+package HashMap;
+
+import java.util.HashMap;
+import java.util.Set;
+
+public class Loops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashMap<Integer, String> hashmap = new HashMap<Integer, String>();
+
+		hashmap.put(111, "CHIRU");
+		hashmap.put(222, "RAM CHARAN");
+		hashmap.put(333, "PAWAN KALYAN");
+		hashmap.put(444, " ALLU ARJUN");
+
+		Set total = hashmap.entrySet();
+
+	}
+
+}

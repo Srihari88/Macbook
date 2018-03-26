@@ -1,0 +1,14 @@
+package SortedSet;
+
+import java.util.SortedSet;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SortedSet ss=new SortedSet();
+
+	}
+
+}

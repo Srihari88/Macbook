@@ -1,0 +1,52 @@
+package ArrayProgramsPractice;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+import Arrays.Student;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] a = { 23, 34, 32, 35, 65, 64, 43 };
+
+		// For loop
+
+		System.out.println("**** For Loop*****");
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
+
+		System.out.println("**** For Loop*****");
+
+		for (int aa : a) {
+			System.out.println(aa);
+		}
+
+		Arrays.sort(a);
+
+		System.out.println(Arrays.toString(a));
+
+		Student[] a1 = new Student[6];
+
+		for (Student a2 : a1) {
+			System.out.println(a2);
+		}
+
+		boolean[] b = new boolean[4];
+
+		for (boolean bb : b) {
+			System.out.println(bb);
+		}
+
+		int[] in = new int[4];
+
+		for (int inte : in) {
+			System.out.println(inte);
+		}
+
+	}
+
+}

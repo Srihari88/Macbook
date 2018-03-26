@@ -1,0 +1,30 @@
+package com.project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeMethod;
+
+public class Parallel {
+
+	public WebDriver driver;
+
+	Parallel(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	@BeforeMethod
+
+	public void LanchBrowser(String browser) {
+
+		if (browser.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+
+		} else if (browser.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver",
+					"/Users/reenupanwar/Desktop/Selenium Software/chromedriver 4");
+			driver = new ChromeDriver();
+		}
+	}
+
+}

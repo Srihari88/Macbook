@@ -1,0 +1,25 @@
+package HashMap;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Loops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		HashMap hmap = new HashMap();
+
+		hashmap.put(111, "CHIRU");
+		hashmap.put(222, "RAM CHARAN");
+		hashmap.put(333, "PAWAN KALYAN");
+		hashmap.put(444, " ALLU ARJUN");
+
+		System.out.println("For Loop:");
+        for (Map.Entry me : hmap.entrySet()) {
+          System.out.println("Key: "+me.getKey() + " & Value: " + me.getValue());
+        }
+	}
+
+}

@@ -1,0 +1,21 @@
+package TreeSet;
+
+import java.util.TreeSet;
+
+public class TCS {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		TreeSet t = new TreeSet();
+
+		t.add(new StringBuffer("Sri"));
+		t.add(new StringBuffer("Hari"));
+		t.add(new StringBuffer("Naidu"));
+		t.add(new StringBuffer("Pudu"));
+
+		System.out.println(t);
+
+	}
+
+}

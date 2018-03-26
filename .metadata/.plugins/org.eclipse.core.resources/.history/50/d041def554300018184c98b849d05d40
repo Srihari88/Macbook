@@ -1,0 +1,33 @@
+package com.PageObjectModel.FrameWork.HomePage;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.PageObjectModel.FrameWork.testBase.testBase;
+import com.PageObjectModel.FrameWork.uiActions.HomePage;
+
+public class TC_1VerifyRegisterButton extends testBase {
+
+	HomePage homepage;
+
+	@BeforeTest
+	public void OpenBrowser() {
+		init();
+	}
+
+	@Test
+	public void Verify_RegisterButton() {
+		homepage = new HomePage(driver);
+		homepage.verifyRegisterButton();
+		assertEquals(driver.getCurrentUrl(), "https://www.pitchvision.com/#/register");
+	}
+
+	@AfterTest
+	public void terminateBrowser() {
+		driver.close();
+	}
+
+}

@@ -1,0 +1,35 @@
+package TreeSet;
+
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class SriHari {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		TreeSet t = new TreeSet(new MyComp());
+
+		t.add(new StringBuffer("Sri"));
+		t.add(new StringBuffer("Hari"));
+		t.add(new StringBuffer("Naidu"));
+		t.add(new StringBuffer("Pudu"));
+
+		System.out.println(t);
+		
+		SriHari s=new SriHari();
+
+	}
+
+	class MyComp implements Comparator<StringBuffer> {
+
+		public int compare(StringBuffer o1, StringBuffer o2) {
+			String s1 = o1.toString();
+			String s2 = o2.toString();
+
+			return s1.compareTo(s2);
+		}
+
+	}
+
+}

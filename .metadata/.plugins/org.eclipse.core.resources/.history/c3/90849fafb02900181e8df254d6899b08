@@ -1,0 +1,11 @@
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] a = { 21, 23, 24, 25, 26 };
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package Arrays;
+
+import java.util.ArrayList;
+
+public class SriHari {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList al = new ArrayList();
+
+		al.add("SriHari");
+		al.add("Naidu");
+
+		al.add("Pudu");
+
+	}
+
+}

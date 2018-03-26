@@ -1,0 +1,57 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class DataDriven {
+
+	public WebDriver driver;
+
+	@BeforeMethod
+	public void lunchBrowser() {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.demo.guru99.com/V4/");
+
+		driver.manage().window().maximize();
+
+	}
+
+	@DataProvider(name = "TestData")
+
+	public Object getData() {
+		Object[][] data = new Object[3][2];
+
+		data[0][0] = "mngr121789";
+		data[0][1] = "vugEryg";
+
+		data[1][0] = "hhdjhjdhj";
+		data[1][1] = "vugEryg";
+
+		data[2][0] = "mngr121789";
+		data[2][1] = "hjdshfjkdshf";
+
+		data[3][0] = "mngr1dfd21789";
+		data[3][1] = "hjdshfjkdshf";
+
+		return data;
+	}
+
+	@Test(dataProvider = "TestData")
+
+	public void Login(String uname, String pwd) throws InterruptedException {
+		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys(uname);
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(pwd);
+
+		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+
+		String exp_HompePage = driver.getTitle();
+
+		System.out.println(driver.getTitle());
+
+		Thread.sleep(4000);
+
+	}
+
+}

@@ -1,0 +1,26 @@
+package BasicSelenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class VerificationText {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.flipkart.com/");
+
+		Actions action = new Actions(driver);
+
+		action.moveToElement(driver.findElement(
+				By.xpath(".//*[@id='container']/div/header/div[3]/div/ul/li[2]/ul/li/ul/li[4]/ul/li[10]/a/span")))
+				.build().perform();
+		Thread.sleep(4000);
+
+		System.out.println("Reach");
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.PageObjectModel.FrameWork.HomePage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class TC_1VerifyRegisterButton {
+
+	@Test
+
+	public void OpenBrowser() {
+
+		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver 2");
+		WebDriver driver = new FirefoxDriver();
+
+		driver.get("https://www.pitchvision.com");
+
+	}
+
+}

@@ -1,0 +1,56 @@
+package Arrays;
+
+import java.util.ArrayList;
+
+public class Employees implements Comparable<Employees>{
+
+	int eid;
+	String ename;
+
+	public Employees(int eid, String ename) {
+		this.eid = eid;
+		this.ename = ename;
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<Employees> al = new ArrayList<Employees>();
+
+		al.add(new Employees(111, "SriHari"));
+		al.add(new Employees(222, "Naidu"));
+		al.add(new Employees(333, "Pudu"));
+		al.add(new Employees(444, "Koro"));
+
+		// Collections.sort(al);
+
+		for (Employees e : al) {
+			System.out.println(e.eid + "===" + e.ename);
+		}
+
+	}
+
+	// public int compareTo(Object O) {
+	// // TODO Auto-generated method stub
+	// Emp e = (Emp) O;
+	//
+	// if (eid == e.Eid) {
+	// return 0;
+	// } else if (eid > e.Eid) {
+	// return 1;
+	// } else {
+	// return -1;
+	// }
+	//
+
+	public int compareTo(Employees O) {
+		// TODO Auto-generated method stub
+		Emp e = (Emp) O;
+		return ename.compareTo(e.Ename);
+
+	}
+
+	
+
+}
